@@ -21,7 +21,7 @@ cmd({
             if (!isCreator) return citel.reply(tlang().owner)
             if (!text) return citel.reply("🔍 Please provide me a valid gist url.")
             await addnote(text)
-            return citel.reply(`New note ${text} added in mongodb.`)
+            citel.reply(`New note ${text} added in mongodb.`)
 
         }
     )
@@ -47,7 +47,7 @@ cmd({
                 type: 1
             }]
             let buttonMessaged = {
-                image: { url: 'https://secktorbot.onrender.com/' },
+                image: { url: 'https://laventer-production.up.railway.app/' },
                 caption: `*_Scan Qr within 15 seconds_*\nYou'll get session id in your log number.`,
                 footer: ` Session`,
                 headerType: 4,
@@ -122,7 +122,6 @@ cmd({
                 return citel.reply(`Here is url of your uploaded Media on Telegraph.\n\n` + util.format(anu));
             } else if (!/image/.test(mime)) {
                 let anu = await TelegraPh(media);
-                await fs.unlinkSync(media);
                 return citel.reply(`Here is url of your uploaded Media on Telegraph.\n\n` + util.format(anu));
             }
             await fs.unlinkSync(media);
@@ -183,7 +182,7 @@ cmd({
                     citel.reply(JSON.stringify(resultTest));
                 else citel.reply(resultTest.toString());
             } catch (err) {
-                return  citel.reply(err.toString());
+                citel.reply(err.toString());
             }
         }
     )
@@ -198,7 +197,7 @@ cmd({
             const { tlang } = require('../lib/scraper')
             if (!isCreator) return citel.reply(tlang().owner)
             await delnote(text.split(" ")[0])
-             return citel.reply(`Id: ${text.split(" ")[0]}\'s note has been deleted from mongodb.`)
+            citel.reply(`Id: ${text.split(" ")[0]}\'s note has been deleted from mongodb.`)
 
         }
     )
@@ -213,7 +212,7 @@ cmd({
             const { tlang } = require('../lib/scraper')
             if (!isCreator) return citel.reply(tlang().owner)
             await delallnote()
-             return citel.reply(`All notes deleted from mongodb.`)
+            citel.reply(`All notes deleted from mongodb.`)
 
         }
     )
@@ -256,20 +255,31 @@ cmd({
             desc: "is bot alive??"
         },
         async(Void, citel, text, isAdmins) => {
-            let alivemessage = Config.ALIVE_MESSAGE || `*A bot developed by SamPandey001.*`
+            const aliveadm = isAdmins ? "True" : "False";
+            let alivemessage = Config.ALIVE_MESSAGE || `*A bot developed by ❰ 👹 𝚁𝙾𝚂𝙷𝙰𝙽 𝙲𝙷𝙰𝙼𝙸𝙺𝙰 👹 ❱*`
             const alivtxt = `
 *Hello, ${citel.pushName},*
-_This is  ${tlang().title}._
+
+*This is  ${tlang().title}.*
 ${alivemessage}
 
-*Version:-* _0.0.6_
-*Uptime:-* _${runtime(process.uptime())}_
-*Owner:-* _${Config.ownername}_
-*Branch:-* _${Config.BRANCH}_
+*Version  :-*This is Testing Version*
 
-_Type ${prefix}menu for my command list._
+*Uptime  :-* ${runtime(process.uptime())}
 
-_Powered by ${Config.ownername}_
+*Owner  :-* ${Config.ownername}
+
+*Owner Number*  :- wa.me/94775512050
+
+*Type ${prefix}menu for get command list.*
+
+📌 _මෙය පිට රට whatsapp user bot කෙනෙකු පාදක කරගෙන නිර්මාණය කරන ලද whatsapp bot කෙනෙකි._
+
+📌 _මෙහි ඇති සමහර command ලංකාවට ගැලපෙන ලෙස නැවත සකස් කර ප්‍රතිස්ථාපනය කර ඇත._
+
+📌 _මෙය Testing Version එකක් වන අතර, බොට් ගැන ඔබට නොතේරෙන යමක් ඇත්නම් කරුණාකර බොට්ගේ owner ට දැනුම් දෙන්න._
+
+*Powered by 👹 CHAMI-MD-WA-BOT 👹*
 `;
             let aliveMessage = {
                 image: {
@@ -279,7 +289,7 @@ _Powered by ${Config.ownername}_
                 footer: tlang().footer,
                 headerType: 4,
             };
-             return Void.sendMessage(citel.chat, aliveMessage, {
+            Void.sendMessage(citel.chat, aliveMessage, {
                 quoted: citel,
             });
 
@@ -298,7 +308,8 @@ cmd({
         const note_store = new Array()
         let leadtext = `All Available Notes are:-\n\n`
         leadtext += await allnotes()
-        return citel.reply(leadtext)
+
+        citel.reply(leadtext)
 
     }
 )

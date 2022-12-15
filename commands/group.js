@@ -42,7 +42,7 @@ cmd({
             use: '<reply to any image/video.>',
         },
         async(Void, citel, text) => {
-            if (!citel.quoted) return citel.reply(`*Mention any Image or video Sir.*`);
+            if (!citel.quoted) return citel.reply(`*ඔබට ස්ටිකර් කරගැනීමට අවශ්‍ය චායාරුපය මුලින් යොදා, පසුව එය mention කර .sticker යන command එක යොදන්න.* 🧑‍🔧`);
             let mime = citel.quoted.mtype
             pack = Config.packname
             author = Config.author
@@ -735,7 +735,7 @@ cmd({
             filename: __filename,
             use: '<number>',
         },
-        async(Void, citel, text,{isCreator}) => {
+        async(Void, citel, text) => {
             if (!citel.isGroup) return citel.reply(tlang().group);
             const groupAdmins = await getAdmin(Void, citel)
             const botNumber = await Void.decodeJid(Void.user.id)
@@ -743,7 +743,7 @@ cmd({
             const isAdmins = citel.isGroup ? groupAdmins.includes(citel.sender) : false;
 
             if (!text) return citel.reply("Please provide me number.");
-            if (!isCreator) return citel.reply(tlang().owner)
+            if (!isAdmins) citel.reply(tlang().admin);
             if (!isBotAdmins) return citel.reply(tlang().botAdmin);
             let users = citel.mentionedJid[0] ? citel.mentionedJid[0] : citel.quoted ? citel.quoted.sender : text.replace(/[^0-9]/g, "") + "@s.whatsapp.net";
             await Void.groupParticipantsUpdate(citel.chat, [users], "add");
@@ -833,7 +833,7 @@ cmd({
                 const isBotAdmins = citel.isGroup ? groupAdmins.includes(botNumber) : false;
                 const isAdmins = citel.isGroup ? groupAdmins.includes(citel.sender) : false;
                 if (!isAdmins) return citel.reply('Only Admins are allowed to delete other persons message.')
-                if (!isBotAdmins) return citel.reply('I can\'t delete anyones message without getting Admin Role.')
+                if (!isBotAdmins) return citel.reply('I can delete anyones message without getting Admin Role.')
                 if (!citel.quoted) return citel.reply(`Please reply to any message. ${tlang().greet}`);
                 let { chat, fromMe, id } = citel.quoted;
                 const key = {

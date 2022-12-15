@@ -155,7 +155,7 @@ cmd({
     )
     //---------------------------------------------------------------------------
 cmd({
-            pattern: "image",
+            pattern: "img",
             category: "search",
             desc: "Searches Image on Google",
             use: '<text>',

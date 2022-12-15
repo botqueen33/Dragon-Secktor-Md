@@ -47,53 +47,23 @@ cmd({
     )
     //---------------------------------------------------------------------------
 cmd({
-        pattern: "fact",
-        desc: "Sends fact in chat.",
+        pattern: "meme",
+        desc: "Sends meme in chat.",
         category: "fun",
         filename: __filename,
     },
     async(Void, citel, text) => {
-        const { data } = await axios.get(`https://nekos.life/api/v2/fact`)
-        return citel.reply(`*Fact:* ${data.fact}\n\n*Powered by Secktor*`)   
+        waifudd = await axios.get("https://meme-api.herokuapp.com/gimme");
+        let button2Messages = {
+            image: {
+                url: waifudd.data.url,
+            },
+            caption: waifudd.data.title,
+            headerType: 1,
+        };
+        return await Void.sendMessage(citel.chat, button2Messages, {
+            quoted: citel,
+        })
     }
 
-)
-    //---------------------------------------------------------------------------
-    cmd({
-        pattern: "quotes",
-        desc: "Sends quotes in chat.",
-        category: "fun",
-        filename: __filename,
-    },
-    async(Void, citel, text) => {
-        var quoo = await axios.get(`https://favqs.com/api/qotd`)
-        const replyf = `
-╔════◇
-║ *🎗️Content:* ${quoo.data.quote.body}
-║ *👤Author:* ${quoo.data.quote.author}
-║    
-╚════════════╝ `
-return citel.reply(replyf)
-    }
-
-)
-    //---------------------------------------------------------------------------
-    cmd({
-        pattern: "define",
-        desc: "urban dictionary.",
-        category: "fun",
-        filename: __filename,
-    },
-    async(Void, citel, text) => {
-        try{
-            let { data } = await axios.get(`http://api.urbandictionary.com/v0/define?term=${text}`)
-            var textt = `
-            Word: ${text}
-            Definition: ${data.list[0].definition.replace(/\[/g, "").replace(/\]/g, "")}
-            Example: ${data.list[0].example.replace(/\[/g, "").replace(/\]/g, "")}`
-            return citel.reply(textt)
-                    } catch {
-                        return citel.reply(`No result for ${text}`)
-                    }
-    }
 )
