@@ -1,7 +1,7 @@
   <p align="center">  
   <a href="https://citel.vercel.app/">
-    <img alt="secktor docs" height="300" src="https://secktorbot.tech/main.jpg">
-    <h1 align="center">Secktor MD Whatsapp bot</h1>
+    <img alt="secktor docs" height="300" src="https://i.imgur.com/Rgf8y2j.jpeg">
+    <h1 align="center">👹 CHAMI-MD-WA-BOT 👹</h1>
   </a>
 </p>
    
@@ -21,14 +21,14 @@
 
 <p align="center"><img src="https://profile-counter.glitch.me/{SamPandey001}/count.svg" alt="SamPandey001 :: Visitor's Count" /></p>
 
-  <p align="center"> Introducing Secktor,Secktor is designed to bring a whole new level of excitement to your boring WhatsApp use. </p
+  <p align="center"> 📌  මෙය පිට රට whatsapp user bot කෙනෙකු වන Secktor MD Whatsapp bot පාදක කරගෙන නිර්මාණය කරන ලද whatsapp bot කෙනෙකි. මෙහි ඇති සමහර command ලංකාවට ගැලපෙන ලෙස නැවත සකස් කර ප්‍රතිස්ථාපනය කර ඇත. 📌 </p
  
-- Install [External Plugins](https://github.com/SamPandey001/Secktor-Plugins)
+- Install [External Plugins](https://github.com/chamiofficial/CHAMI-MDv1-Plugins)
 ## Deployment Methods
 ---
 1. ***Get [SESSION-ID](https://secktorbot.tech) by scanning QR code. `Whatapp>Three dots>Linked Devices`***
-2.  ***Get a Mongodb uri from [Mongodb](https://github.com/SamPandey001/Secktor-Md/wiki/Mongodb-URI) | [Tutorial](https://www.youtube.com/watch?v=WWrpBCBlyuo).***
-3.  ***Click [FORK](https://github.com/SamPandey001/Secktor-MD/fork)***
+2.  ***Get a Mongodb uri from [Mongodb](https://github.com/SamPandey001/Secktor-Md/wiki/Mongodb-URI).***
+3.  ***Click [FORK](https://github.com/chamiofficial/CHAMI-MDv1/fork)***
 4.  ***Deploy on [Heroku](https://secktorbot.tech/heroku)***
 
 5. ***[Deploy on Koyeb](https://secktorbot.me/koyeb)***
