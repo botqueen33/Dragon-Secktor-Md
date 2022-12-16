@@ -69,18 +69,18 @@ cmd({
             let yts = require("secktor-pack")
             let search = await yts(text)
             listSerch = []
-            teskd = `\nඔබ සෙවූ වචනය ${text}. කරුණාකර 100MB ට අඩු වීඩියෝ පමණක් තෝරා එවන්න\n`
+            teskd = `\n🔍ඔබ සෙවූ වචනය ${text}. \n⛔ කරුණාකර 100MB ට අඩු වීඩියෝ පමණක් තෝරන්න 🗃️\n`
             for (let i of search.all) {
                 listSerch.push({
                     title: i.title,
                     rowId: `${prefix}ytmp4 ${i.url}`,
-                    description: `Secktor / ${i.timestamp}`
+                    description: `Dragon-MD / ${i.timestamp}`
                 })
             }
             const sections = [
 
                 {
-                    title: "සම්පූර්ණ සෙවීම් 🔎 / Total Search 🔎" + search.all.length,
+                    title: "Dragon MD සම්පූර්ණ සෙවීම් 🔎 / Dragon MD Total Search 🔎" + search.all.length,
                     rows: listSerch
                 }
 
@@ -89,7 +89,7 @@ cmd({
                 text: teskd,
                 footer: tlang().footer,
                 title: ` *${tlang().title}. 🎥 Youtube Video Downloader 👨‍🔧*`,
-                buttonText: "ඔබට අවශ්‍ය වීඩියෝව තෝරා එවන්න",
+                buttonText: "🗃️ අවශ්‍ය වීඩියෝව තෝරන්න 🗃️",
                 mentions: await Void.parseMention(teskd),
                 sections
             }
@@ -127,9 +127,9 @@ cmd({
                     type: 1,
                 },
                   {
-                    buttonId: `${prefix}ytdoc ${anu.url}`,
+                    buttonId: `${prefix}ytd ${anu.url}`,
                     buttonText: {
-                        displayText: "📁 Document 💾",
+                        displayText: "Document 💾",
                     },
                     type: 1,
                 },
@@ -139,16 +139,18 @@ cmd({
                     url: anu.thumbnail,
                 },
                 caption: `
-╭───────────────◆
-│⿻ ${tlang().title} 
-│  *Youtube Song & Video Downloader* ✨
-│⿻ *තේමාව:* ${anu.title}
-│⿻ *Duration:* ${anu.timestamp}
-│⿻ *Viewers:* ${anu.views}
-│⿻ *Uploaded:* ${anu.ago}
-│⿻ *Author:* ${anu.author.name}
-╰────────────────◆
-⦿ *Url* : ${anu.url}
+*╭─[ _🐉DRAGON-MD-V3🐉_ ]─❂*
+*├─( _🎞️ YT DOWNLOADER 🎶_ )* 
+*│⿻* ${tlang().ytTitle} ${anu.title}
+*│⿻* ${tlang().ytDuration}* ${anu.timestamp}
+*│⿻* ${tlang().ytViews} ${anu.views}
+*│⿻* ${tlang().ytLikes} ${anu.like}
+*│⿻* ${tlang().ytUpload} ${anu.ago}
+*│⿻* ${tlang().ytChannel} ${anu.author.name}
+*│⿻* ${tlang().ytCategory} ${anu.genre}
+*│⿻* ${tlang().ytLink} ${anu.url}
+*│⿻* ${tlang().ytDescription} ${anu.description}
+*└──────────────◆*
 `,
                 footer: tlang().footer,
                 buttons: buttons,
@@ -186,7 +188,7 @@ cmd({
         async(Void, citel, text) => {
             if (!text) return reply("What picture are you looking for?") && Void.sendMessage(citel.chat, {
                 react: {
-                    text: '❌',
+                    text: '❗',
                     key: citel.key
                 }
             })
@@ -317,11 +319,11 @@ cmd({
             let textt = "*YouTube Search*\n\n Result From " + text + "\n\n───────────────────\n";
             let no = 1;
             for (let i of search.all) {
-                textt += `⚡ No : ${no++}\n ❤Title : ${i.title}\n♫ Type : ${
+                textt += `⚡ No : ${no++}\n ${tlang().ytTitle} ${i.title}\n♫ Type : ${
           i.type
-        }\n🙈Views : ${i.views}\n⌛Duration : ${
+        }\n${tlang().ytViews} ${i.views}\n${tlang().ytDuration} ${
           i.timestamp
-        }\n🌟Upload At : ${i.ago}\n👑Author : ${i.author.name}\n🎵Url : ${
+        }\n${tlang().ytUpload} ${i.ago}\n${tlang().ytChannel} ${i.author.name}\n🎵Url : ${
           i.url
         }\n\n──────────────\n\n`;
             }
@@ -349,14 +351,14 @@ cmd({
                 return `${Math.floor(Math.random() * 10000)}${ext}`;
             };
             if (!text) {
-                citel.reply(`❌Please provide me a url`);
+                citel.reply(`❗Please provide me a url`);
                 return;
             }
             try {
                 let urlYt = text;
-                if (!urlYt.startsWith("http")) return citel.reply(`❌ Give youtube link!`);
+                if (!urlYt.startsWith("http")) return citel.reply(`❗ Give youtube link!`);
                 let infoYt = await ytdl.getInfo(urlYt);
-                if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`❌ Video file too big!`);
+                if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`❗ Video file too big!`);
                 let titleYt = infoYt.videoDetails.title;
                 let randomName = getRandom(".mp4");
 
@@ -395,7 +397,7 @@ cmd({
                     }
                     return Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
                 } else {
-                    citel.reply(`❌ File size bigger than 40mb.`);
+                    citel.reply(`❗ File size bigger than 40mb.`);
                 }
 
                 fs.unlinkSync(`./${randomName}`);
@@ -417,19 +419,19 @@ cmd({
         };
 
         if (text.length === 0) {
-            reply(`❌ URL is empty! \nSend ${prefix}ytmp3 url`);
+            reply(`❗ URL is empty! \nSend ${prefix}ytmp3 url`);
             return;
         }
         try {
             let urlYt = text;
             if (!urlYt.startsWith("http")) {
-                citel.reply(`❌ Give youtube link!`);
+                citel.reply(`❗ Give youtube link!`);
                 return;
             }
             let infoYt = await ytdl.getInfo(urlYt);
             //30 MIN
             if (infoYt.videoDetails.lengthSeconds >= videotime) {
-                reply(`❌ I can't download that long video!`);
+                reply(`❗ I can't download that long video!`);
                 return;
             }
             let titleYt = infoYt.videoDetails.title;
@@ -469,7 +471,7 @@ cmd({
                 }
                 return Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
             } else {
-                citel.reply(`❌ File size bigger than 40mb.`);
+                citel.reply(`❗ File size bigger than 40mb.`);
             }
             fs.unlinkSync(`./${randomName}`);
         } catch (e) {
@@ -492,19 +494,19 @@ cmd({
         };
 
         if (text.length === 0) {
-            reply(`❌ URL is empty! \nSend ${prefix}ytmp3 url`);
+            reply(`❗ URL is empty! \nSend ${prefix}ytmp3 url`);
             return;
         }
         try {
             let urlYt = text;
             if (!urlYt.startsWith("http")) {
-                citel.reply(`❌ Give youtube link!`);
+                citel.reply(`❗ Give youtube link!`);
                 return;
             }
             let infoYt = await ytdl.getInfo(urlYt);
             //30 MIN
             if (infoYt.videoDetails.lengthSeconds >= videotime) {
-                reply(`❌ I can't download that long video!`);
+                reply(`❗ I can't download that long video!`);
                 return;
             }
             let titleYt = infoYt.videoDetails.title;
@@ -544,7 +546,7 @@ cmd({
                 }
                 return Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
             } else {
-                citel.reply(`❌ File size bigger than 40mb.`);
+                citel.reply(`⛔ File size bigger than 40mb ⛔.`);
             }
             fs.unlinkSync(`./${randomName}`);
         } catch (e) {
