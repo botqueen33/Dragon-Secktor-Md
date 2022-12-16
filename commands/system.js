@@ -256,21 +256,25 @@ cmd({
         },
         async(Void, citel, text, isAdmins) => {
             const aliveadm = isAdmins ? "True" : "False";
-            let alivemessage = Config.ALIVE_MESSAGE || `*A bot developed by _😎៚ᴍʀͥ.ᴀͣᴍͫɪʏᴀ͢⁸⁵⁴¹⃟✦⃝̮̮〽️ 😈`
+            let alivemessage = Config.ALIVE_MESSAGE || `*👨‍💻 A bot developed by ❰ 👹 ៚֟ᴍ֢ʀͥ.ᴀͣᴍͫɪʏ͙ᴀ֮༒֘ᴏꜰ̐̈́ᴄ֮༒֘ʏᴛ͢⁸⁵⁴¹༆࿐ 👹 ❱*`
             const alivtxt = `
-*Hello, ${citel.pushName},*
+🤖 ℍ𝕚 *, ${citel.pushName},* 𝔹𝕠𝕥 𝕚𝕤 𝕆𝕟𝕝𝕚𝕟𝕖 ℕ𝕠𝕨 🤖
 
-🤖 ℍ𝕖𝕪 𝕋𝕙𝕖𝕣𝕖 𝔹𝕠𝕥 𝕚𝕤 𝕆𝕟𝕝𝕚𝕟𝕖 ℕ𝕠𝕨 🤖
+⚕️ ɯԋαƚ ყσυ ɯαɳƚ ƚσ ԃσ? ⚕️
+👨‍💻 *Tԋιʂ ιʂ ${tlang().title}.*
+${alivemessage}
 
-💯 _*Owner*_ :- _😎៚ᴍʀͥ.ᴀͣᴍͫɪʏᴀ͢⁸⁵⁴¹⃟✦⃝̮̮〽️ 😈_
-💯 _*Bot Name*_ :- 😈🤖 _Amiya Dragon Bot MD_ 🤖😈
-💯 _*Powered By*_ :- _🤖 𝙼𝚁.𝙰𝙼𝙸𝚈𝙰 𝙼𝙳 𝙱𝙾𝚃𝚂 🤖_
+💯 _*Owner*_ :- _៚֟ᴍ֢ʀͥ.ᴀͣᴍͫɪʏ͙ᴀ֮༒֘ᴏꜰ̐̈́ᴄ֮༒֘ʏᴛ͢⁸⁵⁴¹༆࿐_
+💯 _*Bot Name*_ :- 😈🤖 _Dragon MD V3 Beta_ 🤖😈
+💯 _*Powered By*_ :- _🤖 Dragon 𝙼𝙳 𝙱𝙾𝚃𝚂 🤖_
+💯 _*Uptime*_ :- ${runtime(process.uptime())}
+💯 _*Vertion*_ :- 🐉 _Dragon MD V3 Beta_ ♾
 
 ```🐉 .𝚊𝚕𝚒𝚟𝚎 = 𝚋𝚘𝚝 𝚒𝚜 𝚘𝚗𝚕𝚒𝚗𝚎 𝚌𝚑𝚎𝚌𝚔```
 ```🐉 .𝚖𝚎𝚗𝚞 = 𝚐𝚎𝚝 𝚋𝚘𝚝 𝚖𝚎𝚗𝚞```
 ```🐉 .song = 𝚍𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝚢𝚘𝚞𝚝𝚞𝚋𝚎 𝚜𝚘𝚗𝚐```
 ```🐉 .video = 𝚍𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝚢𝚘𝚞𝚝𝚞𝚋𝚎 𝚟𝚒𝚍𝚎𝚘```
-```🐉 .yts = 𝚜𝚎𝚊𝚛𝚌𝚑 𝚒𝚗 𝚢𝚘𝚞𝚝𝚞𝚋𝚎```
+```🐉 .yt = 𝚜𝚎𝚊𝚛𝚌𝚑 𝚒𝚗 𝚢𝚘𝚞𝚝𝚞𝚋𝚎```
 
 _*👨‍💻 𝙲𝚘𝚗𝚝𝚊𝚌𝚝 𝙾𝚠𝚗𝚎𝚛 🐉*_
 _wa.me/+94767453646?text=Hi🥰_
@@ -286,8 +290,11 @@ https://chat.whatsapp.com/Gjo9kk7gTb14pmJNGWpwON
  _*🎉පහලින් තියෙන චැනල් එක subscribe කරලා බොට්ට සප් එකක් දෙන්න 🎉*_
 https://www.youtube.com/@Dragon-MD
 
- ♡ ㅤ    ❍ㅤ     ⎙ㅤ      ⌲
- ʲᵒⁱⁿ ᵃⁿᵈ ˢʰᵃʳᵉ ˢʰᵃʳᵉ`;
+ ♡ ㅤ    ❍ㅤ     ⎙ㅤ       ⌲
+ ʲᵒⁱⁿ      ᵃⁿᵈ       ˢʰᵃʳᵉ       ˢʰᵃʳᵉ
+
+*Powered by 🐉 DRAGON-MD-WA-BOT 👹*
+`;
             let aliveMessage = {
                 image: {
                     url: await botpic(),
