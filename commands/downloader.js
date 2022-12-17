@@ -93,7 +93,7 @@ cmd({
             use: '<faded-Alan Walker>',
         },
         async(Void, citel, text) => {
-            if (!text) return citel.reply(`_*🖇️ කරුණාකර මට YouTube Link එකක් හෝ නමක් දෙන්න ❗*_\n*උදා:-* ```${prefix}song [නම හෝ ලින්කුව]````)
+            if (!text) return citel.reply(`_*🖇️ කරුණාකර මට YouTube Link එකක් හෝ නමක් දෙන්න ❗*_ \n *උදා:-* _${prefix}song [නම හෝ ලින්කුව]_`)
             let yts = require("secktor-pack")
             let search = await yts(text)
             listSerch = []
@@ -237,7 +237,7 @@ cmd({
                 let buttons = [{
                         buttonId: `${prefix}pint ${text}`,
                         buttonText: {
-                            displayText: '🪄 Next Image 🖼️'
+                            displayText: '🖼️ Next Image 🖼️'
                         },
                         type: 1
                     }
