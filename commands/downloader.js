@@ -58,6 +58,34 @@ cmd({
     )
     //---------------------------------------------------------------------------
 cmd({
+            pattern: "ttsi",
+            desc: "text to speech.",
+            category: "downloader",
+            filename: __filename,
+            use: '<හායි,කොහොම ද ඔයාට ?>',
+        },
+        async(Void, citel, text) => {
+            if (!text) return citel.reply('Please give me Sentence to change into audio.')
+            let texttts = text
+            const ttsurl = googleTTS.getAudioUrl(texttts, {
+                lang: "si",
+                slow: false,
+                host: "https://translate.google.com",
+            });
+            return Void.sendMessage(citel.chat, {
+                audio: {
+                    url: ttsurl,
+                },
+                mimetype: "audio/mpeg",
+                fileName: `ttsiCitelVoid.m4a`,
+            }, {
+                quoted: citel,
+            });
+        }
+
+    )
+    //---------------------------------------------------------------------------
+cmd({
             pattern: "video",
             desc: "Downloads video from yt.",
             category: "downloader",
@@ -65,22 +93,22 @@ cmd({
             use: '<faded-Alan Walker>',
         },
         async(Void, citel, text) => {
-            if (!text) return citel.reply(`Example : ${prefix}audio Back in black`)
+            if (!text) return citel.reply(`${tlang().videoexa}`)
             let yts = require("secktor-pack")
             let search = await yts(text)
             listSerch = []
-            teskd = `\n🔍ඔබ සෙවූ වචනය ${text}. \n⛔ කරුණාකර 100MB ට අඩු වීඩියෝ පමණක් තෝරන්න 🗃️\n`
+            teskd = `${tlang().videostx}`
             for (let i of search.all) {
                 listSerch.push({
                     title: i.title,
                     rowId: `${prefix}ytmp4 ${i.url}`,
-                    description: `Dragon-MD / ${i.timestamp}`
+                    description: `${tlang().videosratx} / ${i.timestamp}`
                 })
             }
             const sections = [
 
                 {
-                    title: "Dragon MD සම්පූර්ණ සෙවීම් 🔎 / Dragon MD Total Search 🔎" + search.all.length,
+                    title: "${tlang().videostit}" + search.all.length,
                     rows: listSerch
                 }
 
@@ -88,8 +116,8 @@ cmd({
             const listMessage = {
                 text: teskd,
                 footer: tlang().footer,
-                title: ` *${tlang().title}. 🎥 Youtube Video Downloader 👨‍🔧*`,
-                buttonText: "🗃️ අවශ්‍ය වීඩියෝව තෝරන්න 🗃️",
+                title: ` *${tlang().title}. 🎥 YT Video Downloader ‍🎞️*`,
+                buttonText: "${tlang().videosbutx}️",
                 mentions: await Void.parseMention(teskd),
                 sections
             }
@@ -129,7 +157,7 @@ cmd({
                   {
                     buttonId: `${prefix}ytd ${anu.url}`,
                     buttonText: {
-                        displayText: "Document 💾",
+                        displayText: "💾 As a Document 💾",
                     },
                     type: 1,
                 },
@@ -139,18 +167,29 @@ cmd({
                     url: anu.thumbnail,
                 },
                 caption: `
-*╭─[ _🐉DRAGON-MD-V3🐉_ ]─❂*
-*├─( _🎞️ YT DOWNLOADER 🎶_ )* 
-*│⿻* ${tlang().ytTitle} ${anu.title}
-*│⿻* ${tlang().ytDuration}* ${anu.timestamp}
-*│⿻* ${tlang().ytViews} ${anu.views}
-*│⿻* ${tlang().ytLikes} ${anu.like}
-*│⿻* ${tlang().ytUpload} ${anu.ago}
-*│⿻* ${tlang().ytChannel} ${anu.author.name}
-*│⿻* ${tlang().ytCategory} ${anu.genre}
-*│⿻* ${tlang().ytLink} ${anu.url}
-*│⿻* ${tlang().ytDescription} ${anu.description}
-*└──────────────◆*
+*┏━[ _🐉DRAGON-MD-V3🐉_ ]─❂*
+
+*┣━( _🎞️ YT DOWNLOADER 🎶_ )* 
+
+*┃⿻* ${tlang().ytTitle} ${anu.title}
+
+*┃⿻* ${tlang().ytDuration} ${anu.timestamp}
+
+*┃⿻* ${tlang().ytViews} ${anu.views}
+
+*┃⿻* ${tlang().ytLikes} ${anu.like}
+
+*┃⿻* ${tlang().ytUpload} ${anu.ago}
+
+*┃⿻* ${tlang().ytChannel} ${anu.author.name}
+
+*┃⿻* ${tlang().ytCategory} ${anu.genre}
+
+*┃⿻* ${tlang().ytLink} ${anu.url}
+
+*┃⿻* ${tlang().ytDescription} ${anu.description}
+
+*┗━━━━━━━━━━━━━━◆*
 `,
                 footer: tlang().footer,
                 buttons: buttons,
@@ -198,7 +237,7 @@ cmd({
                 let buttons = [{
                         buttonId: `${prefix}pint ${text}`,
                         buttonText: {
-                            displayText: 'Next Image🎀'
+                            displayText: '🪄 Next Image 🖼️'
                         },
                         type: 1
                     }
@@ -214,8 +253,8 @@ cmd({
                     headerType: 4,
                     contextInfo: {
                         externalAdReply: {
-                            title: `Here it is✨`,
-                            body: `${Config.ownername}`,
+                            title: `${tlang().pintwbtit}`,
+                            body: `🐉 Dragon-MD 🐉`,
                             thumbnail: log0,
                             mediaType: 2,
                             mediaUrl: ``,
@@ -286,7 +325,7 @@ cmd({
             const sections = [
 
                 {
-                    title: "Total Search🔍" + search.all.length,
+                    title: "${tlang().videostit}" + search.all.length,
                     rows: listSerch
                 }
 
