@@ -93,11 +93,11 @@ cmd({
             use: '<faded-Alan Walker>',
         },
         async(Void, citel, text) => {
-            if (!text) return citel.reply(`${tlang().videoexa}`)
+            if (!text) return citel.reply(`_*🖇️ කරුණාකර මට YouTube Link එකක් හෝ නමක් දෙන්න ❗*_\n*උදා:-* ```${prefix}song [නම හෝ ලින්කුව]````)
             let yts = require("secktor-pack")
             let search = await yts(text)
             listSerch = []
-            teskd = `${tlang().videostx}`
+            teskd = `\n🔍 ඔබ සෙවූ වචනය ${text} . \n❌ ඔබට නිවැරදි එක සොයාගත නොහැකි නම් ❌, \nකරුණාකර නිවැරදි YT link එක හෝ නම සමඟ command කරන්න. 🔗\n⛔ කරුණාකර 100MB ට අඩු වීඩියෝ පමණක් තෝරන්න 🗃️\n`
             for (let i of search.all) {
                 listSerch.push({
                     title: i.title,
@@ -108,7 +108,7 @@ cmd({
             const sections = [
 
                 {
-                    title: "${tlang().videostit}" + search.all.length,
+                    title: "Dragon MD සම්පූර්ණ සෙවීම් 🔎" + search.all.length,
                     rows: listSerch
                 }
 
@@ -117,7 +117,7 @@ cmd({
                 text: teskd,
                 footer: tlang().footer,
                 title: ` *${tlang().title}. 🎥 YT Video Downloader ‍🎞️*`,
-                buttonText: "${tlang().videosbutx}️",
+                buttonText: "🗃️ අවශ්‍ය වීඩියෝව තෝරන්න 🗃",
                 mentions: await Void.parseMention(teskd),
                 sections
             }
