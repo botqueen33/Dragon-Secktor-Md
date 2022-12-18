@@ -97,7 +97,7 @@ cmd({
             let yts = require("secktor-pack")
             let search = await yts(text)
             listSerch = []
-            teskd = `\n*┏━[🐉DRAGON-MD-V3🐉]━❂*\n\n*┣━( _🎥 YT Downloader ‍🎞️_ )*\n\n*┃⿻ 🔍 ඔබ සෙවූ වචනය* *${text}.*\n\n*┃⿻ ❌ ඔබට නිවැරදි එක සොයාගත නොහැකි නම්. ❌*\n\n*┃⿻ 🔗 කරුණාකර නිවැරදි YT link එක හෝ නම සමඟ command කරන්න. 🔗*\n\n*┃⿻ ⛔ කරුණාකර 100MB ට අඩු වීඩියෝ පමණක් තෝරන්න. 🗃️*\n\n*┗━━━━━━━━━━━━━━◆*\n`
+            teskd = `\n*┃⿻ 🔍 ඔබ සෙවූ වචනය* *${text}.*\n\n*┃⿻ ❌ ඔබට නිවැරදි එක සොයාගත නොහැකි නම්. ❌*\n\n*┃⿻ 🔗 කරුණාකර නිවැරදි YT link එක හෝ නම සමඟ command කරන්න. 🔗*\n\n*┃⿻ ⛔ කරුණාකර 100MB ට අඩු වීඩියෝ පමණක් තෝරන්න. 🗃️*\n\n*┗━━━━━━━━━━━━━━◆*\n`
             for (let i of search.all) {
                 listSerch.push({
                     title: i.title,
