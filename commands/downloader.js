@@ -33,7 +33,6 @@ cmd({
             pattern: "tts",
             desc: "text to speech.",
             category: "downloader",
-            react: "🎙️"
             filename: __filename,
             use: '<Hii,this is Secktor>',
         },
@@ -62,7 +61,6 @@ cmd({
             pattern: "ttsi",
             desc: "text to speech.",
             category: "downloader",
-            react: "🎙️"
             filename: __filename,
             use: '<හායි,කොහොම ද ඔයාට ?>',
         },
@@ -91,7 +89,6 @@ cmd({
             pattern: "video",
             desc: "Downloads video from yt.",
             category: "downloader",
-            react: "🎥"
             filename: __filename,
             use: '<faded-Alan Walker>',
         },
@@ -135,7 +132,6 @@ cmd({
             pattern: "song",
             desc: "Sends info about the query(of youtube video/audio).",
             category: "downloader",
-            react: "🎶"
             filename: __filename,
             use: '<faded-Alan walker.>',
         },
@@ -210,7 +206,6 @@ cmd({
             pattern: "ringtone",
             desc: "Downloads ringtone.",
             category: "downloader",
-            react: "📳"
             filename: __filename,
             use: '<ringtone name>',
         },
@@ -226,7 +221,6 @@ cmd({
             pattern: "pint",
             desc: "Downloads image from pinterest.",
             category: "downloader",
-            react: "🖼️"
             filename: __filename,
             use: '<text|image name>',
         },
@@ -280,7 +274,6 @@ cmd({
             pattern: "mediafire",
             desc: "Downloads zip from Mediafire.",
             category: "downloader",
-            react: "📂"
             filename: __filename,
             use: '<url of mediafire>',
         },
@@ -313,7 +306,6 @@ cmd({
             pattern: "audio",
             desc: "Downloads audio from youtube.",
             category: "downloader",
-            react: "🎼"
             filename: __filename,
             use: '<text>',
         },
@@ -356,7 +348,6 @@ cmd({
             pattern: "yts",
             desc: "Gives descriptive info of query from youtube..",
             category: "downloader",
-            react: "🔍"
             filename: __filename,
             use: '<yt search text>',
         },
@@ -391,7 +382,6 @@ cmd({
             pattern: "ytmp4",
             desc: "Downloads video from youtube.",
             category: "downloader",
-            react: "⬇️"
             filename: __filename,
             use: '<yt video url>',
         },
@@ -460,7 +450,6 @@ cmd({
         pattern: "ytmp3",
         desc: "Downloads audio by yt link.",
         category: "downloader",
-        react: "⬇️"
         use: '<yt video url>',
     },
     async(Void, citel, text) => {
@@ -537,7 +526,6 @@ cmd({
         pattern: "ytd",
         desc: "Downloads audio by yt link as document.",
         category: "downloader",
-        react: "⬇️"
         use: '<ytdoc video url>',
     },
     async(Void, citel, text) => {
@@ -583,7 +571,6 @@ cmd({
                     mimetype: 'audio/mpeg',
                     fileName: titleYt + ".mp3",
                     caption: ` ⿻ Title : ${titleYt}\n ⿻ File Size : ${fileSizeInMegabytes} MB\n\n🐉 ᴅᴏᴡʟᴏᴀᴅᴇᴅ ʙʏ ʙʟᴀᴄᴋ ᴅʀᴀɢᴏɴ ʏᴛ ꜱᴏɴɢ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 📥\n\n${Config.caption}`,
-                    react: "️🎧"
                     headerType: 4,
                     contextInfo: {
                         externalAdReply: {

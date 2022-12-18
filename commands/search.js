@@ -21,7 +21,6 @@ cmd({
             category: "search",
             desc: "Sends image of asked Movie/Series.",
             use: '<text>',
-            react: "🎬"
             filename: __filename,
         },
         async(Void, citel, text) => {
@@ -64,7 +63,6 @@ cmd({
             category: "search",
             desc: "Sends weather info about asked place.",
             use: '<location>',
-            react: "🌦️"
             filename: __filename,
         },
         async(Void, citel, text) => {
@@ -161,7 +159,6 @@ cmd({
             category: "search",
             desc: "Searches Image on Google",
             use: '<text>',
-            react: "🖼️"
             filename: __filename,
         },
         async(Void, citel, text) => {
@@ -195,7 +192,6 @@ cmd({
             pattern: "couplepp",
             category: "search",
             desc: "Sends two couples pics.",
-            react: "👫"
             filename: __filename,
         },
         async(Void, citel, text) => {
@@ -211,7 +207,6 @@ cmd({
         category: "search",
         desc: "Searches in given rage about given number.",
         use: '947674536xx',
-        react: "🪀"
         filename: __filename,
     },
     async(Void, citel, text) => {
