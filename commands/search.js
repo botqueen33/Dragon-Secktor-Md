@@ -162,7 +162,7 @@ cmd({
             filename: __filename,
         },
         async(Void, citel, text) => {
-            if (!text) return citel.reply("*🔎 පින්තූර සෙවිමට මට වචනයක් හෝ වචන පෙළක් යොමු කරන්න! 🔎*\n*උදා :- _${prefix}img Black Wallpaper_*")
+            if (!text) return citel.reply("*🔎 පින්තූර සෙවිමට මට වචනයක් හෝ වචන පෙළක් යොමු කරන්න! 🔎*\n*උදා :-* _${prefix}img Black Wallpaper_")
             if (!text) return reply("Hey bie please tell me for which pic you're looking");
             let name1 = text.split("|")[0]
             let name2 = text.split("|")[1] || `1`

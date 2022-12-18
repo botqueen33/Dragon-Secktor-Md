@@ -19,8 +19,8 @@ Secktor.cmd({
     },
     async(Void, citel) => {
         var inital = new Date().getTime();
-        await citel.reply('_Pinging 🐉 Dragon-MD-V3 ❗_');
+        await citel.reply('*_Testing Status o 🐉 Dragon-MD-V3 ❗_*');
         var final = new Date().getTime();
-        return await citel.reply('*Pong*\n *' + (final - inital) + ' ms* ');
+        return await citel.reply('⚕️ Dragon MD Status ⚕️\n\n☢️ *ꜱᴘᴇᴇᴅ :-* ' + (final - inital) + ' ms\n⏱️ *ᴜᴘᴛɪᴍᴇ :-* ${runtime(process.uptime())} \n📟 *ᴍᴇᴍᴏʀʏ ᴜꜱᴀɢᴇ :-* ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}');
     }
 );

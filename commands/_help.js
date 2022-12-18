@@ -23,7 +23,7 @@ Secktor.cmd({
             alias: ["menu"],
             desc: "Help list",
             category: "general",
-            react: "✨",
+            react: "📜",
             filename: __filename
         },
         async(Void, citel, text) => {
@@ -72,9 +72,9 @@ Secktor.cmd({
                 for (const category in cmds) {
                     str += `
 ┃  ╭─────────────◆
-┃  │ ✯---- ${tiny(category)} ----⦿
-┃  ╰┬────────────◆
-┃  ┌┤\n`
+┃  │ ✯┉ ${tiny(category)} ┉⦿
+┃  ├─────────────◆
+┃  │\n`
                     for (const plugins of cmds[category]) {
                         str += `┃  │ ❒ ${plugins}\n`
                     }
@@ -85,19 +85,19 @@ Secktor.cmd({
                 let generatebutton = [{
                     buttonId: `${prefix}owner`,
                     buttonText: {
-                        displayText: 'ᴏᴡɴᴇʀ'
-                    },
-                    type: 1
-                }, {
-                    buttonId: `${prefix}ping`,
-                    buttonText: {
-                        displayText: 'ꜱᴘᴇᴇᴅ'
+                        displayText: '🤵 ᴏᴡɴᴇʀ'
                     },
                     type: 1
                 }, {
                     buttonId: `${prefix}list`,
                     buttonText: {
-                        displayText: 'ʟɪꜱᴛ ᴍᴇɴᴜ'
+                        displayText: '📃 ʟɪꜱᴛ ᴍᴇɴᴜ'
+                    },
+                    type: 1
+                }, {
+                    buttonId: `${prefix}ping`,
+                    buttonText: {
+                        displayText: '⚕ ʙᴏᴛ ꜱᴛᴀᴛᴜꜱ ⚕️'
                     },
                     type: 1
                 }]
@@ -117,7 +117,7 @@ Secktor.cmd({
             pattern: "list",
             desc: "list menu",
             category: "general",
-            react: "✅"
+            react: "🐉"
         },
         async(Void, citel) => {
             const { commands } = require('../lib');
