@@ -54,14 +54,14 @@ cmd({
         filename: __filename,
     },
     async(Void, citel) => {
-        let { data } = await axios.get('https://api.github.com/repos/SamPandey001/Secktor-Md')
+        let { data } = await axios.get('https://api.github.com/repos/TechwithAmee1/Dragon-MD-V3')
         let cap = `Hey ${citel.pushName}\n
 *⭐ Total Stars:* ${data.stargazers_count} stars
 *🍽️ Forks:* ${data.forks_count} forks
-*🍁 Repo:* secktorbot.tech/repo
-*Group:* secktorbot.tech/support
-*Deploy Your Own:*-
- SecktorBot.tech/youtube`
+*🍁 Repo:* rotf.lol/Dragon-MD-V3
+*🗣Support ️Group:* rotf.lol/Dragon-MD-Support
+*🐉Deploy Your Own:*-
+ rotf.lol/Dragon-MD-Youtube`
         let buttonMessaged = {
             image: { url: await botpic() },
             caption: cap,
@@ -69,8 +69,8 @@ cmd({
             headerType: 4,
             contextInfo: {
                 externalAdReply: {
-                    title: "Secktor-Repo",
-                    body: "Easy to Use",
+                    title: "🐉 Dragon-MD-V3 🐉",
+                    body: "Sinhala MD Bot",
                     thumbnail: log0,
                     mediaType: 4,
                     mediaUrl: '',
@@ -114,12 +114,12 @@ cmd({
         latensie = speed() - timestampe;
         let ter = `
 🔰 *${tlang().title}* 🔰
-*🌟Description:* A WhatsApp bot with rich features, build in NodeJs to make your WhatsApp enjoyable.
+*🌟Description:* A Sinhala WhatsApp bot with rich features, build in NodeJs to make your WhatsApp enjoyable.
 *⚡Speed:* ${latensie.toFixed(4)} ms
 *🚦Uptime:* ${runtime(process.uptime())}
-*🕸Version:* 1.0.0
+*🕸Version:* 3.0.0
 *👤Owner:*  ${Config.ownername}
-*Powered by ${tlang().title}*
+*🐉Powered by ${tlang().title}*
 `;
         let buttonMessaged = {
             image: {

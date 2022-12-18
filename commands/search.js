@@ -21,6 +21,7 @@ cmd({
             category: "search",
             desc: "Sends image of asked Movie/Series.",
             use: '<text>',
+            react: "🎬"
             filename: __filename,
         },
         async(Void, citel, text) => {
@@ -63,6 +64,7 @@ cmd({
             category: "search",
             desc: "Sends weather info about asked place.",
             use: '<location>',
+            react: "🌦️"
             filename: __filename,
         },
         async(Void, citel, text) => {
@@ -159,10 +161,11 @@ cmd({
             category: "search",
             desc: "Searches Image on Google",
             use: '<text>',
+            react: "🖼️"
             filename: __filename,
         },
         async(Void, citel, text) => {
-            if (!text) return citel.reply("Provide me a query!")
+            if (!text) return citel.reply("*🔎 පින්තූර සෙවිමට මට වචනයක් හෝ වචන පෙළක් යොමු කරන්න! 🔎*\n*උදා :- _${prefix}img Black Wallpaper_*")
             if (!text) return reply("Hey bie please tell me for which pic you're looking");
             let name1 = text.split("|")[0]
             let name2 = text.split("|")[1] || `1`
@@ -177,7 +180,7 @@ cmd({
                         image: {
                             url: images,
                         },
-                        caption: ` `,
+                        caption: `🐉 ᴅᴏᴡʟᴏᴀᴅᴇᴅ ʙʏ ʙʟᴀᴄᴋ ᴅʀᴀɢᴏɴ ɪᴍᴀɢᴇ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 📥\n\n ${Config.caption}`,
                         headerType: 4,
                     };
                     Void.sendMessage(citel.chat, buttonMessage, {
@@ -192,6 +195,7 @@ cmd({
             pattern: "couplepp",
             category: "search",
             desc: "Sends two couples pics.",
+            react: "👫"
             filename: __filename,
         },
         async(Void, citel, text) => {
@@ -206,7 +210,8 @@ cmd({
         pattern: "iswa",
         category: "search",
         desc: "Searches in given rage about given number.",
-        use: '9112345678xx',
+        use: '947674536xx',
+        react: "🪀"
         filename: __filename,
     },
     async(Void, citel, text) => {

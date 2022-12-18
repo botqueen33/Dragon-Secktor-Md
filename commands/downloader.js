@@ -33,6 +33,7 @@ cmd({
             pattern: "tts",
             desc: "text to speech.",
             category: "downloader",
+            react: "🎙️"
             filename: __filename,
             use: '<Hii,this is Secktor>',
         },
@@ -61,6 +62,7 @@ cmd({
             pattern: "ttsi",
             desc: "text to speech.",
             category: "downloader",
+            react: "🎙️"
             filename: __filename,
             use: '<හායි,කොහොම ද ඔයාට ?>',
         },
@@ -89,15 +91,16 @@ cmd({
             pattern: "video",
             desc: "Downloads video from yt.",
             category: "downloader",
+            react: "🎥"
             filename: __filename,
             use: '<faded-Alan Walker>',
         },
         async(Void, citel, text) => {
-            if (!text) return citel.reply(`_*🖇️ කරුණාකර මට YouTube Link එකක් හෝ නමක් දෙන්න ❗*_ \n *උදා:-* _${prefix}song [නම හෝ ලින්කුව]_`)
+            if (!text) return citel.reply(`_*🖇️ කරුණාකර මට YouTube Link එකක් හෝ නමක් දෙන්න ❗*_\n*උදා:-* _${prefix}video [නම හෝ ලින්කුව]_`)
             let yts = require("secktor-pack")
             let search = await yts(text)
             listSerch = []
-            teskd = `\n🔍 ඔබ සෙවූ වචනය ${text} . \n❌ ඔබට නිවැරදි එක සොයාගත නොහැකි නම් ❌, \nකරුණාකර නිවැරදි YT link එක හෝ නම සමඟ command කරන්න. 🔗\n⛔ කරුණාකර 100MB ට අඩු වීඩියෝ පමණක් තෝරන්න 🗃️\n`
+            teskd = `\n*┏━[🐉DRAGON-MD-V3🐉]━❂*\n\n*┣━( _🎥 YT Downloader ‍🎞️_ )*\n\n*┃⿻ 🔍 ඔබ සෙවූ වචනය* *${text}.*\n\n*┃⿻ ❌ ඔබට නිවැරදි එක සොයාගත නොහැකි නම්. ❌*\n\n*┃⿻ 🔗 කරුණාකර නිවැරදි YT link එක හෝ නම සමඟ command කරන්න. 🔗*\n\n*┃⿻ ⛔ කරුණාකර 100MB ට අඩු වීඩියෝ පමණක් තෝරන්න. 🗃️*\n\n*┗━━━━━━━━━━━━━━◆*\n`
             for (let i of search.all) {
                 listSerch.push({
                     title: i.title,
@@ -108,7 +111,7 @@ cmd({
             const sections = [
 
                 {
-                    title: "Dragon MD සම්පූර්ණ සෙවීම් 🔎" + search.all.length,
+                    title: "Dragon MD සම්පූර්ණ සෙවීම් 🔎 / Dragon MD Total Search 🔎" + search.all.length,
                     rows: listSerch
                 }
 
@@ -116,7 +119,7 @@ cmd({
             const listMessage = {
                 text: teskd,
                 footer: tlang().footer,
-                title: ` *${tlang().title}. 🎥 YT Video Downloader ‍🎞️*`,
+                title: `*┌─[🐉DRAGON-MD-V3🐉]─❂*\n\n*┣━( _🎥 YT Downloader ‍🎞️_ )*`,
                 buttonText: "🗃️ අවශ්‍ය වීඩියෝව තෝරන්න 🗃",
                 mentions: await Void.parseMention(teskd),
                 sections
@@ -132,25 +135,26 @@ cmd({
             pattern: "song",
             desc: "Sends info about the query(of youtube video/audio).",
             category: "downloader",
+            react: "🎶"
             filename: __filename,
             use: '<faded-Alan walker.>',
         },
         async(Void, citel, text) => {
-            if (!text) return citel.reply(`Use ${command} Back in Black`);
+            if (!text) return citel.reply(`_*🖇️ කරුණාකර මට YouTube Link එකක් හෝ නමක් දෙන්න ❗*_\n*උදා:-* _${prefix}song [නම හෝ ලින්කුව]_`);
             let yts = require("secktor-pack");
             let search = await yts(text);
             let anu = search.videos[0];
             let buttons = [{
                     buttonId: `${prefix}ytmp4 ${anu.url}`,
                     buttonText: {
-                        displayText: "🎥 වීඩියෝව / Video 📽️",
+                        displayText: "📽 වීඩියෝව / Video 📽️",
                     },
                     type: 1,
                 },
                 {
                     buttonId: `${prefix}ytmp3 ${anu.url}`,
                     buttonText: {
-                        displayText: "🎶 සිංදුව / Audio 🎵",
+                        displayText: "🎵 සිංදුව / Audio 🎵",
                     },
                     type: 1,
                 },
@@ -206,6 +210,7 @@ cmd({
             pattern: "ringtone",
             desc: "Downloads ringtone.",
             category: "downloader",
+            react: "📳"
             filename: __filename,
             use: '<ringtone name>',
         },
@@ -221,6 +226,7 @@ cmd({
             pattern: "pint",
             desc: "Downloads image from pinterest.",
             category: "downloader",
+            react: "🖼️"
             filename: __filename,
             use: '<text|image name>',
         },
@@ -237,7 +243,7 @@ cmd({
                 let buttons = [{
                         buttonId: `${prefix}pint ${text}`,
                         buttonText: {
-                            displayText: '🖼️ Next Image 🖼️'
+                            displayText: '🪄 Next Image 🖼️'
                         },
                         type: 1
                     }
@@ -274,6 +280,7 @@ cmd({
             pattern: "mediafire",
             desc: "Downloads zip from Mediafire.",
             category: "downloader",
+            react: "📂"
             filename: __filename,
             use: '<url of mediafire>',
         },
@@ -306,6 +313,7 @@ cmd({
             pattern: "audio",
             desc: "Downloads audio from youtube.",
             category: "downloader",
+            react: "🎼"
             filename: __filename,
             use: '<text>',
         },
@@ -348,6 +356,7 @@ cmd({
             pattern: "yts",
             desc: "Gives descriptive info of query from youtube..",
             category: "downloader",
+            react: "🔍"
             filename: __filename,
             use: '<yt search text>',
         },
@@ -382,6 +391,7 @@ cmd({
             pattern: "ytmp4",
             desc: "Downloads video from youtube.",
             category: "downloader",
+            react: "⬇️"
             filename: __filename,
             use: '<yt video url>',
         },
@@ -420,7 +430,7 @@ cmd({
                         jpegThumbnail: log0,
                         mimetype: 'video/mp4',
                         fileName: `${titleYt}.mp4`,
-                        caption: ` ⿻ Title : ${titleYt}\n ⿻ File Size : ${fileSizeInMegabytes} MB`,
+                        caption: ` ⿻ Title : ${titleYt}\n ⿻ File Size : ${fileSizeInMegabytes} MB\n\n🐉 ᴅᴏᴡʟᴏᴀᴅᴇᴅ ʙʏ ʙʟᴀᴄᴋ ᴅʀᴀɢᴏɴ ʏᴛ ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 📥\n\n${Config.caption}`,
                         headerType: 4,
                         contextInfo: {
                             externalAdReply: {
@@ -450,6 +460,7 @@ cmd({
         pattern: "ytmp3",
         desc: "Downloads audio by yt link.",
         category: "downloader",
+        react: "⬇️"
         use: '<yt video url>',
     },
     async(Void, citel, text) => {
@@ -494,6 +505,7 @@ cmd({
                     audio: fs.readFileSync(`./${randomName}`),
                     mimetype: 'audio/mpeg',
                     fileName: titleYt + ".mp3",
+                    caption: ` ⿻ Title : ${titleYt}\n ⿻ File Size : ${fileSizeInMegabytes} MB\n\n🐉 ᴅᴏᴡʟᴏᴀᴅᴇᴅ ʙʏ ʙʟᴀᴄᴋ ᴅʀᴀɢᴏɴ ʏᴛ ꜱᴏɴɢ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 📥\n\n${Config.caption}`,
                     headerType: 4,
                     contextInfo: {
                         externalAdReply: {
@@ -525,6 +537,7 @@ cmd({
         pattern: "ytd",
         desc: "Downloads audio by yt link as document.",
         category: "downloader",
+        react: "⬇️"
         use: '<ytdoc video url>',
     },
     async(Void, citel, text) => {
@@ -569,6 +582,8 @@ cmd({
                     document: fs.readFileSync(`./${randomName}`),
                     mimetype: 'audio/mpeg',
                     fileName: titleYt + ".mp3",
+                    caption: ` ⿻ Title : ${titleYt}\n ⿻ File Size : ${fileSizeInMegabytes} MB\n\n🐉 ᴅᴏᴡʟᴏᴀᴅᴇᴅ ʙʏ ʙʟᴀᴄᴋ ᴅʀᴀɢᴏɴ ʏᴛ ꜱᴏɴɢ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 📥\n\n${Config.caption}`,
+                    react: "️🎧"
                     headerType: 4,
                     contextInfo: {
                         externalAdReply: {

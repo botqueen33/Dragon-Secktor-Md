@@ -295,6 +295,25 @@ https://www.youtube.com/@Dragon-MD
 
 *Powered by 🐉 DRAGON-MD-WA-BOT 👹*
 `;
+            let generatebutton = [{
+                    buttonId: `${prefix}owner`,
+                    buttonText: {
+                        displayText: 'ᴏᴡɴᴇʀ'
+                    },
+                    type: 1
+                }, {
+                    buttonId: `${prefix}ping`,
+                    buttonText: {
+                        displayText: 'ꜱᴘᴇᴇᴅ'
+                    },
+                    type: 1
+                }, {
+                    buttonId: `${prefix}menu`,
+                    buttonText: {
+                        displayText: 'ᴍᴇɴᴜ'
+                    },
+                    type: 1
+                }]
             let aliveMessage = {
                 image: {
                     url: await botpic(),
