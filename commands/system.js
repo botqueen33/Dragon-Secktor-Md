@@ -258,42 +258,7 @@ cmd({
             const aliveadm = isAdmins ? "True" : "False";
             let alivemessage = Config.ALIVE_MESSAGE || `*👨‍💻 A bot developed by ❰ 👹 ៚֟ᴍ֢ʀͥ.ᴀͣᴍͫɪʏ͙ᴀ֮༒֘ᴏꜰ̐̈́ᴄ֮༒֘ʏᴛ͢⁸⁵⁴¹༆࿐ 👹 ❱*`
             const alivtxt = `
-🤖 ℍ𝕚 *, ${citel.pushName},* 𝔹𝕠𝕥 𝕚𝕤 𝕆𝕟𝕝𝕚𝕟𝕖 ℕ𝕠𝕨 🤖
-
-⚕️ ɯԋαƚ ყσυ ɯαɳƚ ƚσ ԃσ? ⚕️
-👨‍💻 *Tԋιʂ ιʂ ${tlang().title}.*
-${alivemessage}
-
-💯 _*Owner*_ :- _៚֟ᴍ֢ʀͥ.ᴀͣᴍͫɪʏ͙ᴀ֮༒֘ᴏꜰ̐̈́ᴄ֮༒֘ʏᴛ͢⁸⁵⁴¹༆࿐_
-💯 _*Bot Name*_ :- 😈🤖 _Dragon MD V3 Beta_ 🤖😈
-💯 _*Powered By*_ :- _🤖 Dragon 𝙼𝙳 𝙱𝙾𝚃𝚂 🤖_
-💯 _*Uptime*_ :- ${runtime(process.uptime())}
-💯 _*Vertion*_ :- 🐉 _Dragon MD V3 Beta_ ♾
-
-_🐉 .𝚊𝚕𝚒𝚟𝚎 = 𝚋𝚘𝚝 𝚒𝚜 𝚘𝚗𝚕𝚒𝚗𝚎 𝚌𝚑𝚎𝚌𝚔_
-_🐉 .𝚖𝚎𝚗𝚞 = 𝚐𝚎𝚝 𝚋𝚘𝚝 𝚖𝚎𝚗𝚞_
-_🐉 .song = 𝚍𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝚢𝚘𝚞𝚝𝚞𝚋𝚎 𝚜𝚘𝚗𝚐_
-_🐉 .video = 𝚍𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝚢𝚘𝚞𝚝𝚞𝚋𝚎 𝚟𝚒𝚍𝚎𝚘_
-_🐉 .yt = 𝚜𝚎𝚊𝚛𝚌𝚑 𝚒𝚗 𝚢𝚘𝚞𝚝𝚞𝚋𝚎_
-
-_*👨‍💻 𝙲𝚘𝚗𝚝𝚊𝚌𝚝 𝙾𝚠𝚗𝚎𝚛 🐉*_
-_wa.me/+94767453646?text=Hi🥰_
-
-(click here 📲)👆🤍❤️✨
-
-*🤖😈 𝙰𝙼𝙸𝚈𝙰 𝙳𝚁𝙰𝙶𝙾𝙽 𝙱𝙾𝚃 𝙾𝙵𝙵𝙸𝙲𝙸𝙰𝙻 𝙶𝚁𝙾𝚄𝙿 😈🤖 :-*
-https://chat.whatsapp.com/Cp96xRSt5DhBqxzjBzL0oc
-
-*🪄🎊 𝙾𝙵𝙵𝙸𝙲𝙸𝙰𝙻 𝙲𝙷𝙰𝚃 𝙶𝚁𝙾𝚄𝙿 🎊🪄 :-*
-https://chat.whatsapp.com/Gjo9kk7gTb14pmJNGWpwON
-
- _*🎉පහලින් තියෙන චැනල් එක subscribe කරලා බොට්ට සප් එකක් දෙන්න 🎉*_
-https://www.youtube.com/@Dragon-MD
-
- ♡ ㅤ    ❍ㅤ     ⎙ㅤ       ⌲
- ʲᵒⁱⁿ      ᵃⁿᵈ       ˢʰᵃʳᵉ       ˢʰᵃʳᵉ
-
-*Powered by 🐉 DRAGON-MD-WA-BOT 👹*
+🤖 ℍ𝕚 *, ${citel.pushName},* 𝔹𝕠𝕥 𝕚𝕤 𝕆𝕟𝕝𝕚𝕟𝕖 ℕ𝕠𝕨 🤖\n\n⚕️ ɯԋαƚ ყσυ ɯαɳƚ ƚσ ԃσ? ⚕️\n👨‍💻 *Tԋιʂ ιʂ ${tlang().title}.*\n${alivemessage}\n\n💯 _*Owner*_ :- _៚֟ᴍ֢ʀͥ.ᴀͣᴍͫɪʏ͙ᴀ֮༒֘ᴏꜰ̐̈́ᴄ֮༒֘ʏᴛ͢⁸⁵⁴¹༆࿐_\n💯 _*Bot Name*_ :- 😈🤖 _Dragon MD V3 Beta_ 🤖😈\n💯 _*Powered By*_ :- _🤖 Dragon 𝙼𝙳 𝙱𝙾𝚃𝚂 🤖_\n💯 _*Uptime*_ :- ${runtime(process.uptime())}\n💯 _*Vertion*_ :- 🐉 _Dragon MD V3 Beta_ ♾\n\n_🐉 .𝚊𝚕𝚒𝚟𝚎 = 𝚋𝚘𝚝 𝚒𝚜 𝚘𝚗𝚕𝚒𝚗𝚎 𝚌𝚑𝚎𝚌𝚔_\n_🐉 .𝚖𝚎𝚗𝚞 = 𝚐𝚎𝚝 𝚋𝚘𝚝 𝚖𝚎𝚗𝚞_\n_🐉 .song = 𝚍𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝚢𝚘𝚞𝚝𝚞𝚋𝚎 𝚜𝚘𝚗𝚐_\n_🐉 .video = 𝚍𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝚢𝚘𝚞𝚝𝚞𝚋𝚎 𝚟𝚒𝚍𝚎𝚘_\n_🐉 .yt = 𝚜𝚎𝚊𝚛𝚌𝚑 𝚒𝚗 𝚢𝚘𝚞𝚝𝚞𝚋𝚎_\n\n_*👨‍💻 𝙲𝚘𝚗𝚝𝚊𝚌𝚝 𝙾𝚠𝚗𝚎𝚛 🐉*_\n_wa.me/+94767453646?text=Hi🥰_\n\n(click here 📲)👆🤍❤️✨\n\n*🤖😈 𝙰𝙼𝙸𝚈𝙰 𝙳𝚁𝙰𝙶𝙾𝙽 𝙱𝙾𝚃 𝙾𝙵𝙵𝙸𝙲𝙸𝙰𝙻 𝙶𝚁𝙾𝚄𝙿 😈🤖 :-*\nhttps://chat.whatsapp.com/Cp96xRSt5DhBqxzjBzL0oc\n\n*🪄🎊 𝙾𝙵𝙵𝙸𝙲𝙸𝙰𝙻 𝙲𝙷𝙰𝚃 𝙶𝚁𝙾𝚄𝙿 🎊🪄 :-*\nhttps://chat.whatsapp.com/Gjo9kk7gTb14pmJNGWpwON\n\n _*🎉පහලින් තියෙන චැනල් එක subscribe කරලා බොට්ට සප් එකක් දෙන්න 🎉*_\nhttps://www.youtube.com/@Dragon-MD\n♡ ㅤ    ❍ㅤ     ⎙ㅤ       ⌲\nʲᵒⁱⁿ      ᵃⁿᵈ       ˢʰᵃʳᵉ       ˢʰᵃʳᵉ\n*Powered by 🐉 DRAGON-MD-WA-BOT 👹*
 `;
             let aliveMessage = {
                 image: {
