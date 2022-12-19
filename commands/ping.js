@@ -11,8 +11,11 @@
 
 //---------------------------------------------------------------------------
 const os = require('os')
-const Secktor = require('../lib')
+const moment = require("moment-timezone")
 const fs = require("fs")
+const Secktor = require('../lib')
+const Config = require('../config')
+let { fancytext, tlang, tiny, runtime, formatp, botpic, prefix, sck1 } = require("../lib");
 const long = String.fromCharCode(8206)
 const readmore = long.repeat(4001)
 Secktor.cmd({
@@ -23,7 +26,7 @@ Secktor.cmd({
     },
     async(Void, citel) => {
         var inital = new Date().getTime();
-        await citel.reply('*_Testing Status o 🐉 Dragon-MD-V3 ❗_*');
+        await citel.reply('*_Testing Status of 🐉 Dragon-MD-V3 ❗_*');
         var final = new Date().getTime();
         return await citel.reply('⚕️ Dragon MD Status ⚕️\n\n☢️ *ꜱᴘᴇᴇᴅ :-* ' + (final - inital) + ' ms\n⏱️ *ᴜᴘᴛɪᴍᴇ :-* ${runtime(process.uptime())} \n📟 *ᴍᴇᴍᴏʀʏ ᴜꜱᴀɢᴇ :-* ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}');
     }
