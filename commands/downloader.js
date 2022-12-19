@@ -167,18 +167,9 @@ cmd({
                 },
             ];
             let buttonMessage = {
-                contextInfo: {
-                        externalAdReply: {
-                            title: h,
-                            body: n,
-                            renderLargerThumbnail: true,
-                            thumbnailUrl: search.all[0].thumbnail,
-                            mediaUrl: text,
-                            mediaType: 1,
-                            thumbnail: await getBuffer(search.all[0].thumbnail),
-                            sourceUrl: text,
-                        },
-                    },
+                image: {
+                    url: anu.thumbnail,
+                },
                 caption: `
 *┏━[ _🐉DRAGON-MD-V3🐉_ ]─❂*
 
@@ -207,7 +198,6 @@ cmd({
                 footer: tlang().footer,
                 buttons: buttons,
                 headerType: 4,
-                
             };
             return Void.sendMessage(citel.chat, buttonMessage, {
                 quoted: citel,
