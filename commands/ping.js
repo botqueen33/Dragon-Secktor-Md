@@ -11,6 +11,7 @@
 
 //---------------------------------------------------------------------------
 const Secktor = require('../lib')
+const os = require('os')
 Secktor.cmd({
         pattern: "ping",
         desc: "To check ping",

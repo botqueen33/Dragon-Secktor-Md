@@ -22,6 +22,7 @@ cmd({
             desc: "Sends image of asked Movie/Series.",
             use: '<text>',
             filename: __filename,
+            react: "🎬",
         },
         async(Void, citel, text) => {
             if (!text) return citel.reply(`_Name a Series or movie ${tlang().greet}._`);
@@ -64,6 +65,7 @@ cmd({
             desc: "Sends weather info about asked place.",
             use: '<location>',
             filename: __filename,
+            react: "🌦️",
         },
         async(Void, citel, text) => {
             if (!text) return citel.reply("Give me location.Baka!!");
@@ -160,6 +162,7 @@ cmd({
             desc: "Searches Image on Google",
             use: '<text>',
             filename: __filename,
+            react: "🖼️",
         },
         async(Void, citel, text) => {
             if (!text) return citel.reply("*🔎 පින්තූර සෙවිමට මට වචනයක් හෝ වචන පෙළක් යොමු කරන්න! 🔎*\n*උදා :-* _${prefix}img Black Wallpaper_")
@@ -193,6 +196,7 @@ cmd({
             category: "search",
             desc: "Sends two couples pics.",
             filename: __filename,
+            react: "👫",
         },
         async(Void, citel, text) => {
             let anu = await fetchJson('https://raw.githubusercontent.com/iamriz7/kopel_/main/kopel.json')
@@ -208,6 +212,7 @@ cmd({
         desc: "Searches in given rage about given number.",
         use: '947674536xx',
         filename: __filename,
+        react: "🪀",
     },
     async(Void, citel, text) => {
         var inputnumber = text.split(" ")[0]

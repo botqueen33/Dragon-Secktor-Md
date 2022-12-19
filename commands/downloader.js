@@ -322,18 +322,18 @@ cmd({
             let yts = require("secktor-pack")
             let search = await yts(text)
             listSerch = []
-            teskd = `Result From ${text}.\n_+ ${search.all.length} more results._`
+            teskd = `*┌─[🐉DRAGON-MD-V3🐉]─❂*\n\n*┣━( _🎥 YT Downloader ‍🎞️_ )*\n\n*┃⿻ 🔍 ඔබ සෙවූ වචනය* *${text}.*\n\n*┃⿻ 📝 ප්‍රතිඵල ගණන* _+ ${search.all.length}_ \n\n*┃⿻ ❌ ඔබට නිවැරදි එක සොයාගත නොහැකි නම්. ❌*\n\n*┃⿻ 🔗 කරුණාකර නිවැරදි YT link එක හෝ නම සමඟ command කරන්න. 🔗*\n\n*┃⿻ ⛔ කරුණාකර 100MB ට අඩු වීඩියෝ පමණක් තෝරන්න. 🗃️*\n\n*┗━━━━━━━━━━━━━━◆*`
             for (let i of search.all) {
                 listSerch.push({
                     title: i.title,
                     rowId: `${prefix}ytmp3 ${i.url}`,
-                    description: `Secktor / ${i.timestamp}`
+                    description: `Dragon MD / ${i.timestamp}`
                 })
             }
             const sections = [
 
                 {
-                    title: "${tlang().videostit}" + search.all.length,
+                    title: "Dragon MD සම්පූර්ණ සෙවීම් 🔎 / Dragon MD Total Search 🔎" + search.all.length,
                     rows: listSerch
                 }
 
@@ -342,7 +342,7 @@ cmd({
                 text: teskd,
                 footer: tlang().footer,
                 title: ``,
-                buttonText: "Songs",
+                buttonText: "🗃️ අවශ්‍ය සින්දුව තෝරන්න 🗃",
                 mentions: await Void.parseMention(teskd),
                 sections
             }

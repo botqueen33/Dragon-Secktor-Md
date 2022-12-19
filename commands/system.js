@@ -252,7 +252,8 @@ cmd({
             pattern: "alive",
             category: "general",
             filename: __filename,
-            desc: "is bot alive??"
+            desc: "is bot alive??",
+            react: "🐲"
         },
         async(Void, citel, text, isAdmins) => {
             const aliveadm = isAdmins ? "True" : "False";
@@ -295,34 +296,35 @@ https://www.youtube.com/@Dragon-MD
 
 *Powered by 🐉 DRAGON-MD-WA-BOT 👹*
 `;
-            let generatebutton = [{
+            let buttons = [{
                     buttonId: `${prefix}owner`,
                     buttonText: {
-                        displayText: 'ᴏᴡɴᴇʀ'
-                    },
-                    type: 1
-                }, {
-                    buttonId: `${prefix}ping`,
-                    buttonText: {
-                        displayText: 'ꜱᴘᴇᴇᴅ'
+                        displayText: '🤵 ᴏᴡɴᴇʀ'
                     },
                     type: 1
                 }, {
                     buttonId: `${prefix}menu`,
                     buttonText: {
-                        displayText: 'ᴍᴇɴᴜ'
+                        displayText: '📜 ᴍᴇɴᴜ'
                     },
                     type: 1
-                }]
-            let aliveMessage = {
+                }, {
+                    buttonId: `${prefix}ping`,
+                    buttonText: {
+                        displayText: '⚕ ʙᴏᴛ ꜱᴛᴀᴛᴜꜱ ⚕'
+                    },
+                    type: 1
+                },];
+            let buttonMessage = {
                 image: {
                     url: await botpic(),
                 },
                 caption: alivtxt,
                 footer: tlang().footer,
+                buttons: buttons,
                 headerType: 4,
             };
-            Void.sendMessage(citel.chat, aliveMessage, {
+            return Void.sendMessage(citel.chat, buttonMessage, {
                 quoted: citel,
             });
 
