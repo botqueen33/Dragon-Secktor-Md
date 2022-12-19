@@ -169,8 +169,8 @@ cmd({
             let buttonMessage = {
                 contextInfo: {
                         externalAdReply: {
-                            title: ,
-                            body: ,
+                            title: h,
+                            body: n,
                             renderLargerThumbnail: true,
                             thumbnailUrl: search.all[0].thumbnail,
                             mediaUrl: text,
