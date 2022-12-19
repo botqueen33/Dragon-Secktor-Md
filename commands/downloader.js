@@ -35,7 +35,7 @@ cmd({
             category: "downloader",
             filename: __filename,
             use: '<Hii,this is Secktor>',
-            react: "🎙️"
+            react: "🎙️",
         },
         async(Void, citel, text) => {
             if (!text) return citel.reply('Please give me Sentence to change into audio.')
@@ -64,6 +64,7 @@ cmd({
             category: "downloader",
             filename: __filename,
             use: '<හායි,කොහොම ද ඔයාට ?>',
+            react: "🎙️",
         },
         async(Void, citel, text) => {
             if (!text) return citel.reply('Please give me Sentence to change into audio.')
@@ -92,6 +93,7 @@ cmd({
             category: "downloader",
             filename: __filename,
             use: '<faded-Alan Walker>',
+            react: "🎥",
         },
         async(Void, citel, text) => {
             if (!text) return citel.reply(`_*🖇️ කරුණාකර මට YouTube Link එකක් හෝ නමක් දෙන්න ❗*_\n*උදා:-* _${prefix}video [නම හෝ ලින්කුව]_`)
@@ -135,6 +137,7 @@ cmd({
             category: "downloader",
             filename: __filename,
             use: '<faded-Alan walker.>',
+            react: "🎶",
         },
         async(Void, citel, text) => {
             if (!text) return citel.reply(`_*🖇️ කරුණාකර මට YouTube Link එකක් හෝ නමක් දෙන්න ❗*_\n*උදා:-* _${prefix}song [නම හෝ ලින්කුව]_`);
@@ -209,6 +212,7 @@ cmd({
             category: "downloader",
             filename: __filename,
             use: '<ringtone name>',
+            react: "📳",
         },
         async(Void, citel, text) => {
             if (!text) return citel.reply(`Example: ${prefix}ringtone back in black`)
@@ -224,6 +228,7 @@ cmd({
             category: "downloader",
             filename: __filename,
             use: '<text|image name>',
+            react: "🖼️",
         },
         async(Void, citel, text) => {
             if (!text) return reply("What picture are you looking for?") && Void.sendMessage(citel.chat, {
@@ -277,6 +282,7 @@ cmd({
             category: "downloader",
             filename: __filename,
             use: '<url of mediafire>',
+            react: "📂",
         },
         async(Void, citel, text) => {
             if (!text) return citel.reply(`Give link ${tlang().greet}`);
@@ -309,6 +315,7 @@ cmd({
             category: "downloader",
             filename: __filename,
             use: '<text>',
+            react: "🎼",
         },
         async(Void, citel, text) => {
             if (!text) return citel.reply(`Example : ${prefix + command} Back in black`)
@@ -351,6 +358,7 @@ cmd({
             category: "downloader",
             filename: __filename,
             use: '<yt search text>',
+            react: "🔍",
         },
         async(Void, citel, text) => {
             let yts = require("secktor-pack");
@@ -385,6 +393,7 @@ cmd({
             category: "downloader",
             filename: __filename,
             use: '<yt video url>',
+            react: "⬇️",
         },
         async(Void, citel, text) => {
             const getRandom = (ext) => {
@@ -452,6 +461,7 @@ cmd({
         desc: "Downloads audio by yt link.",
         category: "downloader",
         use: '<yt video url>',
+        react: "⬇️",
     },
     async(Void, citel, text) => {
         const getRandom = (ext) => {
@@ -528,6 +538,7 @@ cmd({
         desc: "Downloads audio by yt link as document.",
         category: "downloader",
         use: '<ytdoc video url>',
+        react: "⬇️",
     },
     async(Void, citel, text) => {
         const getRandom = (ext) => {
