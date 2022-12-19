@@ -12,7 +12,8 @@
 //---------------------------------------------------------------------------
 const os = require('os')
 const Secktor = require('../lib')
-const fs = require("fs")const long = String.fromCharCode(8206)
+const fs = require("fs")
+const long = String.fromCharCode(8206)
 const readmore = long.repeat(4001)
 Secktor.cmd({
         pattern: "ping",
