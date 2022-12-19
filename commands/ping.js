@@ -16,10 +16,10 @@ const fs = require("fs")
 const Secktor = require('../lib')
 const Config = require('../config')
 const { fancytext, tlang, tiny, runtime, formatp, botpic, prefix, sck1 } = require("../lib");
-const axios = require('axios')
 const speed = require('performance-now')
 const long = String.fromCharCode(8206)
 const readmore = long.repeat(4001)
+
 Secktor.cmd({
         pattern: "ping",
         desc: "To check ping",
