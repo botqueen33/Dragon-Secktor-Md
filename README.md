@@ -1,21 +1,16 @@
-# ASTRO-MD
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+# Dragon-MD
 
    
   ### ඔබට පහසුවෙන් QR කේතය Repl.it මඟින් ලබා ගත හැක.. පහල බටනය CLICK කරන්න
 
-[![Run on Repl.it](https://repl.it/badge/github/quiec/whatsasena)](https://replit.com/@astromdqr/AstroMdqrv2?output%20only=1&lite=1#index.js)
+[![Run on Repl.it](https://repl.it/badge/github/quiec/whatsasena)](https://replit.com/@AmiyaProgrammer/Dragon-MD-V3-QR?output%20only=1&lite=1#index.js)
 
 ## QR කේතය ලබා ගත් පසු Bot deploy කිරීමට පහල බටනය CLICK කරන්න..
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/vihangayt0/Astro-MD-V2)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/TechwithAmee1/Dragon-MD-V2)
 
 ---------------------------------   
 
- ###  Developer : Vihanga-YT
+ ###  Developer : ៚֟ᴍ֢ʀͥ.ᴀͣᴍͫɪʏ͙ᴀ֮༒֘ᴏꜰ̐̈́ᴄ֮༒֘ʏᴛ͢⁸⁵⁴¹༆࿐
 
-## Thanks To
-##### ◉[@adiwajshing](https://github.com/adiwajshing/) for coded.
-##### ◉[@yusufusta](https://github.com/yusufusta/) for coded.
-##### ◉[@SamPandey001](https://github.com/SamPandey001) For session and multi file auth State.
-##### ◉[@sanuwaofficial](https://github.com/sanuwaofficial) for apk downloader and help. 
-##### ◉[@edm-official](https://github.com/edm-official) for base and help.
-##### ◉[@DarkMakerofc](https://github.com/DarkMakerofc) for help. 
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
