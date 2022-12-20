@@ -1,54 +1,21 @@
-  <p align="center">  
-  <a href="https://citel.vercel.app/">
-    <img alt="secktor docs" height="300" src="https://i.imgur.com/Rgf8y2j.jpeg">
-    <h1 align="center">👹 CHAMI-MD-WA-BOT 👹</h1>
-  </a>
-</p>
+# ASTRO-MD
+
    
-<p align="center">
+  ### ඔබට පහසුවෙන් QR කේතය Repl.it මඟින් ලබා ගත හැක.. පහල බටනය CLICK කරන්න
 
-  <a aria-label="Join our chats" href="https://chat.whatsapp.com/Bl2F9UTVU4CBfZU6eVnrbCl" target="_blank">
-    <img alt="whatsapp" src="https://img.shields.io/badge/Join Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
-  </a>
- 
-  <a aria-label="Secktor is free to use" href="https://github.com/SamPandey001/Secktor-Md/blob/main/LICENCE" target="_blank">
-    <img alt="License: GPL-3" src="https://badges.frapsoft.com/os/gpl/gpl.png?v=103)](https://opensource.org/licenses/GPL-3.0/" target="_blank" />
-  </a>
-</p>
+[![Run on Repl.it](https://repl.it/badge/github/quiec/whatsasena)](https://replit.com/@astromdqr/AstroMdqrv2?output%20only=1&lite=1#index.js)
 
+## QR කේතය ලබා ගත් පසු Bot deploy කිරීමට පහල බටනය CLICK කරන්න..
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/vihangayt0/Astro-MD-V2)
 
----
+---------------------------------   
 
-<p align="center"><img src="https://profile-counter.glitch.me/{SamPandey001}/count.svg" alt="SamPandey001 :: Visitor's Count" /></p>
+ ###  Developer : Vihanga-YT
 
-  <p align="center"> 📌  මෙය පිට රට whatsapp user bot කෙනෙකු වන Secktor MD Whatsapp bot පාදක කරගෙන නිර්මාණය කරන ලද whatsapp bot කෙනෙකි. මෙහි ඇති සමහර command ලංකාවට ගැලපෙන ලෙස නැවත සකස් කර ප්‍රතිස්ථාපනය කර ඇත. 📌 </p
- 
-- Install [External Plugins](https://github.com/chamiofficial/CHAMI-MDv1-Plugins)
-## Deployment Methods
----
-1. ***Get [SESSION-ID](https://secktorbot.tech) by scanning QR code. `Whatapp>Three dots>Linked Devices`***
-2.  ***Get a Mongodb uri from [Mongodb](https://github.com/SamPandey001/Secktor-Md/wiki/Mongodb-URI).***
-3.  ***Click [FORK](https://github.com/chamiofficial/CHAMI-MDv1/fork)***
-4.  ***Deploy on [Heroku](https://secktorbot.tech/heroku)***
-
-5. ***[Deploy on Koyeb](https://secktorbot.me/koyeb)***
-
-6.  ***[Deploy on Railway](https://secktorbot.tech/railway)***
-  
-7. ***Deploy in [Linux](https://github.com/SamPandey001/Secktor-Deploy#deploy-in-any-shell-including-termux)***
-
-8. if you get error in doing above try, [Deploy on VPS or PC.](https://github.com/SamPandey001/Secktor-Md/blob/main/deploy-on-vps.md)
----
-9. More info about [Secktor](https://secktorbot.tech/).
-10. Deploy tutorial [Youtube Video](https://secktorbot.tech/youtube).
-
-11. SUPPORT GROUP: <a href="https://secktorbot.tech/support"><img alt="WhatsApp" src="https://camo.githubusercontent.com/2157131829ac512183ee8f8b6c6f803688a4cc66a2e686602844e80478401a7c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4a6f696e2047726f75702d3235443336363f7374796c653d666f722d7468652d6261646765266c6f676f3d7768617473617070266c6f676f436f6c6f723d7768697465"/></a>
-
-12. Star ⭐ repo if you like Secktor.
-### Thanks To
-
-- [Yusuf Usta](https://github.com/yusufusta) for Ideas
-
-## License
-
-The Secktor is made available under the [GPL-3 license](https://github.com/SamPandey001/Secktor-Md/blob/main/LICENCE). 
+## Thanks To
+##### ◉[@adiwajshing](https://github.com/adiwajshing/) for coded.
+##### ◉[@yusufusta](https://github.com/yusufusta/) for coded.
+##### ◉[@SamPandey001](https://github.com/SamPandey001) For session and multi file auth State.
+##### ◉[@sanuwaofficial](https://github.com/sanuwaofficial) for apk downloader and help. 
+##### ◉[@edm-official](https://github.com/edm-official) for base and help.
+##### ◉[@DarkMakerofc](https://github.com/DarkMakerofc) for help. 
