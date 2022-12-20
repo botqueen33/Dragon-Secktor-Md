@@ -158,15 +158,14 @@ cmd({
     )
     //---------------------------------------------------------------------------
 cmd({
-            pattern: "img",
+            pattern: "image",
             category: "search",
             desc: "Searches Image on Google",
             use: '<text>',
             filename: __filename,
-            react: "🖼️",
         },
         async(Void, citel, text) => {
-            if (!text) return citel.reply("*🔎 පින්තූර සෙවිමට මට වචනයක් හෝ වචන පෙළක් යොමු කරන්න! 🔎*\n*උදා :-* _${prefix}img Black Wallpaper_")
+            if (!text) return citel.reply("Provide me a query!")
             if (!text) return reply("Hey bie please tell me for which pic you're looking");
             let name1 = text.split("|")[0]
             let name2 = text.split("|")[1] || `1`
@@ -181,7 +180,7 @@ cmd({
                         image: {
                             url: images,
                         },
-                        caption: `🐉 ᴅᴏᴡʟᴏᴀᴅᴇᴅ ʙʏ ʙʟᴀᴄᴋ ᴅʀᴀɢᴏɴ ɪᴍᴀɢᴇ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 📥\n\n ${Config.caption}`,
+                        caption: ` `,
                         headerType: 4,
                     };
                     Void.sendMessage(citel.chat, buttonMessage, {
