@@ -198,13 +198,24 @@ cmd({
                 footer: tlang().footer,
                 buttons: buttons,
                 headerType: 4,
-            };
-            return Void.sendMessage(citel.chat, buttonMessage, {
-                quoted: citel,
-            });
-
-        }
-    )
+                    {contextInfo}: {
+                        externalAdReply: {
+                            title: `${anu.title}`,
+                            body: `https://www.youtube.com/@Dragon-MD`,
+                            thumbnail: anu.thumbnail,
+                            mediaType: 2,
+                            mediaUrl: ``,
+                            sourceUrl: `https://www.youtube.com/@Dragon-MD`
+                        }
+                    }
+                }
+                return Void.sendMessage(citel.chat, buttonMessage, {
+                    quoted: citel
+                })
+            } catch (e) {
+                console.log(e)
+            }
+        })
     //---------------------------------------------------------------------------
 cmd({
             pattern: "ringtone",
@@ -253,11 +264,11 @@ cmd({
                     image: {
                         url: result
                     },
-                    caption: ` `,
+                    caption: `🐉 ᴅᴏᴡʟᴏᴀᴅᴇᴅ ʙʏ ʙʟᴀᴄᴋ ᴅʀᴀɢᴏɴ ɪᴍᴀɢᴇ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 📥\n\n${Config.caption}`,
                     footer: tlang().footer,
                     buttons: buttons,
                     headerType: 4,
-                    contextInfo: {
+                    {contextInfo}: {
                         externalAdReply: {
                             title: `${tlang().pintwbtit}`,
                             body: `🐉 Dragon-MD 🐉`,
