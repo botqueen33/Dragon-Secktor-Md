@@ -76,22 +76,24 @@ Secktor.cmd({
 ┇  ┗━━━━━━━━━━━━┉ ⳹
 ┗━「 🎊 Please Subscribe This Channel 🎊 」
    ┇ https://youtube.com/@Dragon-MD-OFC
+   ┋
    ┗┳━━━━━━━━━━━━┉ ⳹
        ┇✑  Please Select
        ┇✑  The Command from, Below
+       ┋
        ┗━━━━━━━━━━━━━┉◈\n
 `
-                str += `◉┈──『 ` + fancytext('Commands', 57) + `』──┈◉\n`
+                str += `◉┈──『 ` + fancytext('Commands', 57) + `』──┈◉\n\n`
                 for (const category in cmds) {
                     str += `┏━━━❐ ❰ ✪『 ${tiny(category)} 』✪ ❱ ━━❐
 ┃\n`
                     for (const plugins of cmds[category]) {
                         str += `┇❂➻✯ ${prefix}${plugins}\n`
                     }
-                    str += `┇\n┗━━━━━━━━━━━━━❏\n`
+                    str += `┇\n┗━━━━━━━━━━━━━❏`
                 }
 
-                    str += `\n`
+                    str += `\n\n`
                 let generatebutton = [{
                     buttonId: `${prefix}owner`,
                     buttonText: {
