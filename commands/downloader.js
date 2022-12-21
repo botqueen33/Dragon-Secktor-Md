@@ -264,7 +264,7 @@ cmd({
                             thumbnail: log0,
                             mediaType: 2,
                             mediaUrl: ``,
-                            sourceUrl: `https://www.youtube.com/@Dragon-MD`
+                            sourceUrl: `https://youtube.com/@Dragon-MD-OFC`
                         }
                     }
                 }

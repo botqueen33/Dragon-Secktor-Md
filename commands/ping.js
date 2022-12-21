@@ -21,6 +21,7 @@ const axios = require('axios')
 const speed = require('performance-now')
 const long = String.fromCharCode(8206)
 const readmore = long.repeat(4001)
+
 Secktor.cmd({
         pattern: "ping",
         desc: "To check ping",
