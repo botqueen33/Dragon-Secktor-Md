@@ -54,7 +54,7 @@ Secktor.cmd({
                 let total = await sck1.countDocuments()
                 let str = ` ┏━━━━ ❲ ` + fancytext(Config.ownername.split(' ')[0], 58) + ` ❳ ━━━━━┉◈\n`
                 str +=
-                     + `┣━◉
+                    `┣━◉
 ┗━「 Hi 👋 , ${citel.pushName} 」
 ┏┫✑  How Are You? 🤭
 ┇┗━━━━━━━━━━━━┉◈
@@ -80,7 +80,7 @@ Secktor.cmd({
        ┇✑  Please Select
        ┇✑  The Command from, Below.
        ┗━━━━━━━━━━━━━┉◈\n
-` + 
+`
                 str += `╭───『 ` + fancytext('Commands', 57) + `』─┈◉`
                 for (const category in cmds) {
                     str += `
