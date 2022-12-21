@@ -198,24 +198,13 @@ cmd({
                 footer: tlang().footer,
                 buttons: buttons,
                 headerType: 4,
-                {contextInfo}:{
-                        externalAdReply: {
-                            title: `${anu.title}`,
-                            body: `https://www.youtube.com/@Dragon-MD`,
-                            thumbnail: anu.thumbnail,
-                            mediaType: 2,
-                            mediaUrl: ``,
-                            sourceUrl: `https://www.youtube.com/@Dragon-MD`
-                        }
-                    }
-                }
-                return Void.sendMessage(citel.chat, buttonMessage, {
-                    quoted: citel
-                })
-            } catch (e) {
-                console.log(e)
-            }
-        })
+            };
+            return Void.sendMessage(citel.chat, buttonMessage, {
+                quoted: citel,
+            });
+
+        }
+    )
     //---------------------------------------------------------------------------
 cmd({
             pattern: "ringtone",
@@ -254,7 +243,7 @@ cmd({
                 let buttons = [{
                         buttonId: `${prefix}pint ${text}`,
                         buttonText: {
-                            displayText: '🪄 Next Image 🖼️'
+                            displayText: 'Next Image 🖼️'
                         },
                         type: 1
                     }
@@ -264,18 +253,18 @@ cmd({
                     image: {
                         url: result
                     },
-                    caption: `🐉 ᴅᴏᴡʟᴏᴀᴅᴇᴅ ʙʏ ʙʟᴀᴄᴋ ᴅʀᴀɢᴏɴ ɪᴍᴀɢᴇ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 📥\n\n${Config.caption}`,
+                    caption: `🐉 ᴅᴏᴡʟᴏᴀᴅᴇᴅ ʙʏ ʙʟᴀᴄᴋ ᴅʀᴀɢᴏɴ ᴘɪɴᴛᴇʀᴇꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 📥\n\n${Config.caption}`,
                     footer: tlang().footer,
                     buttons: buttons,
                     headerType: 4,
-                    {contextInfo}: {
+                    contextInfo: {
                         externalAdReply: {
                             title: `${tlang().pintwbtit}`,
                             body: `🐉 Dragon-MD 🐉`,
                             thumbnail: log0,
                             mediaType: 2,
                             mediaUrl: ``,
-                            sourceUrl: ``
+                            sourceUrl: `https://www.youtube.com/@Dragon-MD`
                         }
                     }
                 }
