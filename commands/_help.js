@@ -52,36 +52,47 @@ Secktor.cmd({
                     .locale('id')
                 const date = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
                 let total = await sck1.countDocuments()
-                let str = `╭────〔 ` + fancytext(Config.ownername.split(' ')[0], 58) + ` 〕─────⊷\n`
+                let str = ` ┏━━━━ ❲ ` + fancytext(Config.ownername.split(' ')[0], 58) + ` ❳ ━━━━━┉◈\n`
                 str +=
-                    '```' + `│ ╭──────────────
-│ │ User:- ${citel.pushName}
-│ │ Theme:- ${tlang().title}
-│ │ Prefix:- [ ${prefix} ]
-│ │ Owner:- ${Config.ownername}
-│ │ Plugins:- ${commands.length}
-│ │ Users:- ${total}
-│ │ Uptime:- ${runtime(process.uptime())}
-│ │ Mem:- ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
-│ │ Time:- ${time}
-│ │ Date:- ${date}
-│ ╰────────────
-╰───────────────⊷\n
-` + '```'
-                str += `╭───『 ` + fancytext('Commands', 57) + `』──◆`
+                     + `┣━◉
+┗━「 Hi 👋 , ${citel.pushName} 」
+┏┫✑  How Are You? 🤭
+┇┗━━━━━━━━━━━━┉◈
+┗━「 𝘽𝙊𝙏 𝙄𝙉𝙁𝙊 」       
+    ┇✘ʀᴜɴᴛɪᴍᴇ : ${runtime(process.uptime())}
+    ┇✘ᴅᴀᴛᴇ : ${date}
+    ┇✘ᴛɪᴍᴇ : ${time}
+    ┇✘ʙᴏᴛ ɴᴀᴍᴇ : Dragon MD V3
+    ┋✘ᴄᴏᴍᴍᴀɴᴅꜱ : ${commands.length}
+    ┋✘ᴍᴇᴍᴏʀʏ ᴜꜱᴀɢᴇ : ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
+    ┋✘ʟᴀɴɢᴜᴀɢᴇ : ${tlang().lang}
+    ┋✘ᴄᴏᴍᴍᴀɴᴅ ᴘʀᴇꜰɪx : [ ${prefix} ]
+    ┋✘ʙᴏᴛ ᴜꜱᴇʀꜱ : ${total}
+    ┇✘ᴏᴡɴᴇʀ ɴᴀᴍᴇ :${Config.ownername}
+    ┋✘ᴅᴇᴠᴇʟᴏᴘᴇʀ ɴᴀᴍᴇ : ៚֟ᴍ֢ʀͥ.ᴀͣᴍͫɪʏ͙ᴀ֮༒֘ᴏꜰ̐̈́ᴄ֮༒֘ʏᴛ͢⁸⁵⁴¹༆࿐
+    ┇✘ᴏᴡɴᴇʀ ɴᴏ : +94767453646
+    ┇✘ʜᴏꜱᴛ ɴᴀᴍᴇ : Dragon MD DB
+┏━┫✘ᴘʟᴀᴛꜰᴏʀᴍ : Linux
+┇  ┗━━━━━━━━━━━━┉ ⳹
+┗━「 🎊 Please Subscribe This Channel 🎊 」
+   ┇ https://youtube.com/@Dragon-MD-OFC
+   ┗┳━━━━━━━━━━━━┉ ⳹
+       ┇✑  Please Select
+       ┇✑  The Command from, Below.
+       ┗━━━━━━━━━━━━━┉◈\n
+` + 
+                str += `╭───『 ` + fancytext('Commands', 57) + `』─┈◉`
                 for (const category in cmds) {
                     str += `
-┃  ╭─────────────◆
-┃  │ ✯┉ ${tiny(category)} ┉⦿
-┃  ├─────────────◆
-┃  │\n`
+│  ┏━━━❐ ❰ ✪『 ${tiny(category)} 』✪ ❱ ━━❐
+│  ┃\n`
                     for (const plugins of cmds[category]) {
-                        str += `┃  │ ❒ ${plugins}\n`
+                        str += `│  ┇❂➻✯ ${prefix}${plugins}\n`
                     }
-                    str += `┃  ╰─────────────◆`
+                    str += `│  ┗━━━━━━━━━━━━━❏`
                 }
 
-                str += `\n╰━━━━━━━━━━━──⊷\n`
+                str += `\n╰────────────┈◉\n`
                 let generatebutton = [{
                     buttonId: `${prefix}owner`,
                     buttonText: {
