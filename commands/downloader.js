@@ -198,7 +198,7 @@ cmd({
                 footer: tlang().footer,
                 buttons: buttons,
                 headerType: 4,
-                    {contextInfo}: {
+                {contextInfo}: {
                         externalAdReply: {
                             title: `${anu.title}`,
                             body: `https://www.youtube.com/@Dragon-MD`,
