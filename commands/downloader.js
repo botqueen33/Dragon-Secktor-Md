@@ -147,7 +147,7 @@ cmd({
             let buttons = [{
                     buttonId: `${prefix}ytmp4 ${anu.url}`,
                     buttonText: {
-                        displayText: "📽 වීඩියෝව / Video 📽️",
+                        displayText: "🎞️ වීඩියෝව / Video 🎞️",
                     },
                     type: 1,
                 },
@@ -322,7 +322,7 @@ cmd({
             let yts = require("secktor-pack")
             let search = await yts(text)
             listSerch = []
-            teskd = `*┌─[🐉DRAGON-MD-V3🐉]─❂*\n\n*┣━( _🎥 YT Downloader ‍🎞️_ )*\n\n*┃⿻ 🔍 ඔබ සෙවූ වචනය* *${text}.*\n\n*┃⿻ 📝 ප්‍රතිඵල ගණන* _+ ${search.all.length}_ \n\n*┃⿻ ❌ ඔබට නිවැරදි එක සොයාගත නොහැකි නම්. ❌*\n\n*┃⿻ 🔗 කරුණාකර නිවැරදි YT link එක හෝ නම සමඟ command කරන්න. 🔗*\n\n*┃⿻ ⛔ කරුණාකර 100MB ට අඩු වීඩියෝ පමණක් තෝරන්න. 🗃️*\n\n*┗━━━━━━━━━━━━━━◆*`
+            teskd = `*┌─[🐉DRAGON-MD-V3🐉]─❂*\n\n*┣━( _🎥 YT Downloader ‍🎞️_ )*\n\n*┃⿻ 🔍 ඔබ සෙවූ වචනය* *${text}.*\n\n*┃⿻ 📝 ප්‍රතිඵල ගණන* _+ ${search.all.length}_ \n\n*┃⿻ ❌ ඔබට නිවැරදි එක සොයාගත නොහැකි නම්. ❌*\n\n*┃⿻ 🔗 කරුණාකර නිවැරදි YT link එක හෝ නම සමඟ command කරන්න. 🔗*\n\n*┃⿻ ⛔ කරුණාකර 100MB ට අඩු සින්දු පමණක් තෝරන්න. 🗃️*\n\n*┗━━━━━━━━━━━━━━◆*`
             for (let i of search.all) {
                 listSerch.push({
                     title: i.title,
@@ -349,6 +349,234 @@ cmd({
             return Void.sendMessage(citel.chat, listMessage, {
                 quoted: citel
             })
+        }
+    )
+    //---------------------------------------------------------------------------
+cmd({
+            pattern: "yt",
+            desc: "Search from youtube.",
+            category: "downloader",
+            filename: __filename,
+            use: '<text>',
+            react: "📡",
+        },
+        async(Void, citel, text) => {
+            if (!text) return citel.reply(`Example : ${prefix + command} Back in black`)
+            let yts = require("secktor-pack")
+            let search = await yts(text)
+            listSerch = []
+            teskd = `*┌─[🐉DRAGON-MD-V3🐉]─❂*\n\n*┣━( _🎥 YT Searcher ‍🎞️_ )*\n\n*┃⿻ 🔍 ඔබ සෙවූ වචනය* *${text}.*\n\n*┃⿻ 📝 ප්‍රතිඵල ගණන* _+ ${search.all.length}_ \n\n*┃⿻ ❌ ඔබට නිවැරදි එක සොයාගත නොහැකි නම්. ❌*\n\n*┃⿻ 🔗 කරුණාකර නිවැරදි YT link එක හෝ නම සමඟ command කරන්න. 🔗*\n\n*┃⿻ ⛔ කරුණාකර 100MB ට අඩු එවා පමණක් තෝරන්න. 🗃️*\n\n*┗━━━━━━━━━━━━━━◆*`
+            for (let i of search.all) {
+                listSerch.push({
+                    title: i.title,
+                    rowId: `${prefix}ytp ${i.url}`,
+                    description: `Dragon MD / ${i.timestamp}`
+                })
+            }
+            const sections = [
+
+                {
+                    title: "Dragon MD සම්පූර්ණ සෙවීම් 🔎 / Dragon MD Total Search 🔎" + search.all.length,
+                    rows: listSerch
+                }
+
+            ]
+            const listMessage = {
+                text: teskd,
+                footer: tlang().footer,
+                title: ``,
+                buttonText: "🗃️ අවශ්‍ය එක තෝරන්න 🗃",
+                mentions: await Void.parseMention(teskd),
+                sections
+            }
+            return Void.sendMessage(citel.chat, listMessage, {
+                quoted: citel
+            })
+        }
+    )
+    //---------------------------------------------------------------------------
+cmd({
+            pattern: "ytp",
+            desc: "Sends info about the query(of youtube video/audio).",
+            filename: __filename,
+            use: '<faded-Alan walker.>',
+            react: "🧮",
+        },
+        async(Void, citel, text) => {
+            if (!text) return citel.reply(`_*🖇️ කරුණාකර මට YouTube Link එකක් හෝ නමක් දෙන්න ❗*_\n*උදා:-* _${prefix}ytp [නම හෝ ලින්කුව]_`);
+            let yts = require("secktor-pack");
+            let search = await yts(text);
+            let anu = search.videos[0];
+            let buttons = [{
+                    buttonId: `${prefix}.videod ${anu.url}`,
+                    buttonText: {
+                        displayText: "🎞️ වීඩියෝව / Video 🎞️",
+                    },
+                    type: 1,
+                },
+                {
+                    buttonId: `${prefix}.songd ${anu.url}`,
+                    buttonText: {
+                        displayText: "🎵 සිංදුව / Audio 🎵",
+                    },
+                    type: 1,
+                }
+            ];
+            let buttonMessage = {
+                image: {
+                    url: anu.thumbnail,
+                },
+                caption: `
+*┏━[ _🐉DRAGON-MD-V3🐉_ ]─❂*
+
+*┣━( _🎞️ YT SEARCHER 🎶_ )* 
+
+*┃⿻* ${tlang().ytTitle} ${anu.title}
+
+*┃⿻* ${tlang().ytDuration} ${anu.timestamp}
+
+*┃⿻* ${tlang().ytViews} ${anu.views}
+
+*┃⿻* ${tlang().ytLikes} ${anu.like}
+
+*┃⿻* ${tlang().ytUpload} ${anu.ago}
+
+*┃⿻* ${tlang().ytChannel} ${anu.author.name}
+
+*┃⿻* ${tlang().ytCategory} ${anu.genre}
+
+*┃⿻* ${tlang().ytLink} ${anu.url}
+
+*┃⿻* ${tlang().ytDescription} ${anu.description}
+
+*┗━━━━━━━━━━━━━━◆*
+`,
+                footer: tlang().footer,
+                buttons: buttons,
+                headerType: 4,
+            };
+            return Void.sendMessage(citel.chat, buttonMessage, {
+                quoted: citel,
+            });
+
+        }
+    )
+    //---------------------------------------------------------------------------
+cmd({
+            pattern: "songd",
+            desc: "Sends info about the query(of youtube video/audio).",
+            filename: __filename,
+            use: '<faded-Alan walker.>',
+            react: "🎶",
+        },
+        async(Void, citel, text) => {
+            if (!text) return citel.reply(`_*🖇️ කරුණාකර මට YouTube Link එකක් හෝ නමක් දෙන්න ❗*_\n*උදා:-* _${prefix}song [නම හෝ ලින්කුව]_`);
+            let yts = require("secktor-pack");
+            let search = await yts(text);
+            let anu = search.videos[0];
+            let buttons = [{
+                    buttonId: `${prefix}ytmp3 ${anu.url}`,
+                    buttonText: {
+                        displayText: "🎵 සිංදුව / Audio 🎵",
+                    },
+                    type: 1,
+                },
+                  {
+                    buttonId: `${prefix}ytd ${anu.url}`,
+                    buttonText: {
+                        displayText: "💾 As a Document 💾",
+                    },
+                    type: 1,
+                },
+            ];
+            let buttonMessage = {
+                image: {
+                    url: anu.thumbnail,
+                },
+                caption: `
+*┏━[ _🐉DRAGON-MD-V3🐉_ ]─❂*
+
+*┣━( _🎞️ YT DOWNLOADER 🎶_ )* 
+
+*┃⿻* ${tlang().ytTitle} ${anu.title}
+
+*┃⿻* ${tlang().ytDuration} ${anu.timestamp}
+
+*┃⿻* ${tlang().ytUpload} ${anu.ago}
+
+*┃⿻* ${tlang().ytChannel} ${anu.author.name}
+
+*┃⿻* ${tlang().ytLink} ${anu.url}
+
+*┗━━━━━━━━━━━━━━◆*
+`,
+                footer: tlang().footer,
+                buttons: buttons,
+                headerType: 4,
+            };
+            return Void.sendMessage(citel.chat, buttonMessage, {
+                quoted: citel,
+            });
+
+        }
+    )
+    //---------------------------------------------------------------------------
+cmd({
+            pattern: "videod",
+            desc: "Sends info about the query(of youtube video/audio).",
+            filename: __filename,
+            use: '<faded-Alan walker.>',
+            react: "🎥",
+        },
+        async(Void, citel, text) => {
+            if (!text) return citel.reply(`_*🖇️ කරුණාකර මට YouTube Link එකක් හෝ නමක් දෙන්න ❗*_\n*උදා:-* _${prefix}video [නම හෝ ලින්කුව]_`);
+            let yts = require("secktor-pack");
+            let search = await yts(text);
+            let anu = search.videos[0];
+            let buttons = [{
+                    buttonId: `${prefix}ytmp4 ${anu.url}`,
+                    buttonText: {
+                        displayText: "🎞️ වීඩියෝව / Video 🎞",
+                    },
+                    type: 1,
+                },
+                  {
+                    buttonId: `${prefix}ytvd ${anu.url}`,
+                    buttonText: {
+                        displayText: "💾 As a Document 💾",
+                    },
+                    type: 1,
+                },
+            ];
+            let buttonMessage = {
+                image: {
+                    url: anu.thumbnail,
+                },
+                caption: `
+*┏━[ _🐉DRAGON-MD-V3🐉_ ]─❂*
+
+*┣━( _🎞️ YT DOWNLOADER 🎶_ )* 
+
+*┃⿻* ${tlang().ytTitle} ${anu.title}
+
+*┃⿻* ${tlang().ytDuration} ${anu.timestamp}
+
+*┃⿻* ${tlang().ytUpload} ${anu.ago}
+
+*┃⿻* ${tlang().ytChannel} ${anu.author.name}
+
+*┃⿻* ${tlang().ytLink} ${anu.url}
+
+*┗━━━━━━━━━━━━━━◆*
+`,
+                footer: tlang().footer,
+                buttons: buttons,
+                headerType: 4,
+            };
+            return Void.sendMessage(citel.chat, buttonMessage, {
+                quoted: citel,
+            });
+
         }
     )
     //---------------------------------------------------------------------------
@@ -519,6 +747,7 @@ cmd({
                             sourceUrl: text,
                         },
                     },
+                    react: "⬇️",
                 }
                 return Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
             } else {
