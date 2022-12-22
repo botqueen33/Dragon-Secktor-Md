@@ -408,14 +408,14 @@ cmd({
             let search = await yts(text);
             let anu = search.videos[0];
             let buttons = [{
-                    buttonId: `${prefix}.videod ${anu.url}`,
+                    buttonId: `${prefix}videod ${anu.url}`,
                     buttonText: {
                         displayText: "🎞️ වීඩියෝව / Video 🎞️",
                     },
                     type: 1,
                 },
                 {
-                    buttonId: `${prefix}.songd ${anu.url}`,
+                    buttonId: `${prefix}songd ${anu.url}`,
                     buttonText: {
                         displayText: "🎵 සිංදුව / Audio 🎵",
                     },
