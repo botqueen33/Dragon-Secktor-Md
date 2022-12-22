@@ -697,19 +697,19 @@ cmd({
         };
 
         if (text.length === 0) {
-            reply(`❗ URL is empty! \nSend ${prefix}ytmp3 url`);
+            reply(`❌ URL is empty! \nSend ${prefix}ytmp3 url`);
             return;
         }
         try {
             let urlYt = text;
             if (!urlYt.startsWith("http")) {
-                citel.reply(`❗ Give youtube link!`);
+                citel.reply(`❌ Give youtube link!`);
                 return;
             }
             let infoYt = await ytdl.getInfo(urlYt);
             //30 MIN
             if (infoYt.videoDetails.lengthSeconds >= videotime) {
-                reply(`❗ I can't download that long video!`);
+                reply(`❌ I can't download that long video!`);
                 return;
             }
             let titleYt = infoYt.videoDetails.title;
@@ -733,7 +733,6 @@ cmd({
                     audio: fs.readFileSync(`./${randomName}`),
                     mimetype: 'audio/mpeg',
                     fileName: titleYt + ".mp3",
-                    caption: ` ⿻ Title : ${titleYt}\n ⿻ File Size : ${fileSizeInMegabytes} MB\n\n🐉 ᴅᴏᴡʟᴏᴀᴅᴇᴅ ʙʏ ʙʟᴀᴄᴋ ᴅʀᴀɢᴏɴ ʏᴛ ꜱᴏɴɢ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 📥\n\n${Config.caption}`,
                     headerType: 4,
                     contextInfo: {
                         externalAdReply: {
@@ -747,11 +746,10 @@ cmd({
                             sourceUrl: text,
                         },
                     },
-                    react: "⬇️",
                 }
                 return Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
             } else {
-                citel.reply(`❗ File size bigger than 40mb.`);
+                citel.reply(`❌ File size bigger than 40mb.`);
             }
             fs.unlinkSync(`./${randomName}`);
         } catch (e) {
