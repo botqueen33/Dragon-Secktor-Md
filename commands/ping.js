@@ -45,8 +45,9 @@ Secktor.cmd({
             filename: __filename
         },
         async(Void, citel, text) => {
-            if (ping) return citel.reply(`_*🖇️ කරුණාකර මට YouTube Link එකක් හෝ නමක් දෙන්න ❗*_\n*උදා:-* _${prefix}song [නම හෝ ලින්කුව]_`);
-             const { commands } = require('../lib');
+            var inital = new Date().getTime();
+            await citel.reply(`_*🖇️ කරුණාකර මට YouTube Link එකක් හෝ නමක් දෙන්න ❗*_\n*උදා:-* song [නම හෝ ලින්කුව]_`);
+                var final = new Date().getTime();
                 const time = moment(moment())
                     .format('HH:mm:ss')
                 moment.tz.setDefault('Asia/COLOMBO')
