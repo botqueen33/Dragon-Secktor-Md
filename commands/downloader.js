@@ -655,22 +655,23 @@ cmd({
                     let search = await yts(text);
                     let buttonMessage = {
                         video: fs.readFileSync(`./${randomName}`),
-                        jpegThumbnail: log0,
+                        jpegThumbnail: https://i.ibb.co/30VVgGW/Amiya.jpg,
                         mimetype: 'video/mp4',
                         fileName: `${titleYt}.mp4`,
                         caption: ` ⿻ Title : ${titleYt}\n ⿻ File Size : ${fileSizeInMegabytes} MB\n\n🐉 ᴅᴏᴡʟᴏᴀᴅᴇᴅ ʙʏ ʙʟᴀᴄᴋ ᴅʀᴀɢᴏɴ ʏᴛ ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 📥\n\n${Config.caption}`,
                         headerType: 4,
                         contextInfo: {
-                            externalAdReply: {
-                                title: titleYt,
-                                body: citel.pushName,
-                                thumbnail: await getBuffer(search.all[0].thumbnail),
-                                renderLargerThumbnail: true,
-                                mediaType: 2,
-                                mediaUrl: search.all[0].thumbnail,
-                                sourceUrl: search.all[0].thumbnail
-                            }
-                        }
+                        externalAdReply: {
+                            title: titleYt,
+                            body: citel.pushName,
+                            renderLargerThumbnail: true,
+                            thumbnailUrl: search.all[0].thumbnail,
+                            mediaUrl: text,
+                            mediaType: 1,
+                            thumbnail: await getBuffer(search.all[0].thumbnail),
+                            sourceUrl: text,
+                        },
+                    },
                     }
                     return Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
                 } else {
@@ -810,6 +811,82 @@ cmd({
                     mimetype: 'audio/mpeg',
                     fileName: titleYt + ".mp3",
                     caption: ` ⿻ Title : ${titleYt}\n ⿻ File Size : ${fileSizeInMegabytes} MB\n\n🐉 ᴅᴏᴡʟᴏᴀᴅᴇᴅ ʙʏ ʙʟᴀᴄᴋ ᴅʀᴀɢᴏɴ ʏᴛ ꜱᴏɴɢ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 📥\n\n${Config.caption}`,
+                    headerType: 4,
+                    contextInfo: {
+                        externalAdReply: {
+                            title: titleYt,
+                            body: citel.pushName,
+                            renderLargerThumbnail: true,
+                            thumbnailUrl: search.all[0].thumbnail,
+                            mediaUrl: text,
+                            mediaType: 1,
+                            thumbnail: await getBuffer(search.all[0].thumbnail),
+                            sourceUrl: text,
+                        },
+                    },
+                }
+                return Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
+            } else {
+                citel.reply(`⛔ File size bigger than 40mb ⛔.`);
+            }
+            fs.unlinkSync(`./${randomName}`);
+        } catch (e) {
+            console.log(e)
+        }
+
+    }
+)
+  //---------------------------------------------------------------------------
+cmd({
+        pattern: "ytvd",
+        desc: "Downloads audio by yt link as document.",
+        category: "downloader",
+        use: '<ytdoc video url>',
+        react: "⬇️",
+    },
+    async(Void, citel, text) => {
+        const getRandom = (ext) => {
+            return `${Math.floor(Math.random() * 10000)}${ext}`;
+        };
+
+        if (text.length === 0) {
+            reply(`❗ URL is empty! \nSend ${prefix}ytmp3 url`);
+            return;
+        }
+        try {
+            let urlYt = text;
+            if (!urlYt.startsWith("http")) {
+                citel.reply(`❗ Give youtube link!`);
+                return;
+            }
+            let infoYt = await ytdl.getInfo(urlYt);
+            //30 MIN
+            if (infoYt.videoDetails.lengthSeconds >= videotime) {
+                reply(`❗ I can't download that long video!`);
+                return;
+            }
+            let titleYt = infoYt.videoDetails.title;
+            let randomName = getRandom(".mp4");
+            const stream = ytdl(urlYt, {
+                    filter: (info) => info.itag == 22 || info.itag == 18,
+                })
+                .pipe(fs.createWriteStream(`./${randomName}`));
+            await new Promise((resolve, reject) => {
+                stream.on("error", reject);
+                stream.on("finish", resolve);
+            });
+
+            let stats = fs.statSync(`./${randomName}`);
+            let fileSizeInBytes = stats.size;
+            let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
+            if (fileSizeInMegabytes <= dlsize) {
+                let yts = require("secktor-pack");
+                let search = await yts(text);
+                let buttonMessage = {
+                    document: fs.readFileSync(`./${randomName}`),
+                    mimetype: 'video/mp4',
+                    fileName: titleYt + ".mp4",
+                    caption: ` ⿻ Title : ${titleYt}\n ⿻ File Size : ${fileSizeInMegabytes} MB\n\n🐉 ᴅᴏᴡʟᴏᴀᴅᴇᴅ ʙʏ ʙʟᴀᴄᴋ ᴅʀᴀɢᴏɴ ʏᴛ ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 📥\n\n${Config.caption}`,
                     headerType: 4,
                     contextInfo: {
                         externalAdReply: {
