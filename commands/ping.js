@@ -46,15 +46,30 @@ Secktor.cmd({
         },
         async(Void, citel, text) => {
             const { commands } = require('../lib');
+            var inital = new Date().getTime();
             await citel.reply(`*_Testing System Status of 🐉 Dragon-MD-V3 ❗_*`);
+                var final = new Date().getTime();
                 const cmds = {}
+                commands.map(async(command, index) => {
+                    if (command.dontAddCommandList === false && command.pattern !== undefined) {
+                        if (!cmds[command.category]) cmds[command.category] = []
+                        cmds[command.category].push(command.pattern)
+                    }
+                })
                 const time = moment(moment())
                     .format('HH:mm:ss')
                 moment.tz.setDefault('Asia/COLOMBO')
                     .locale('id')
                 const date = moment.tz('Asia/Colombo').format('DD/MM/YYYY')
                 let str = `⚕️ Dragon MD System Status ⚕\n\n`
-                str += `☢️ *ꜱᴘᴇᴇᴅ :-* ' + (final - inital) + ' ms\n⏱️ *ᴜᴘᴛɪᴍᴇ :-* ${runtime(process.uptime())} \n📟 *ᴍᴇᴍᴏʀʏ ᴜꜱᴀɢᴇ :-* ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}\n📆 *ᴅᴀᴛᴇ :-* ${date}\n⏰ *ᴛɪᴍᴇ :-* ${time}`
+                str += 
+                `☢️ *ꜱᴘᴇᴇᴅ :-* ' + (final - inital) + ' ms
+⏱️ *ᴜᴘᴛɪᴍᴇ :-* ${runtime(process.uptime())} 
+📟 *ᴍᴇᴍᴏʀʏ ᴜꜱᴀɢᴇ :-* ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
+📆 *ᴅᴀᴛᴇ :-* ${date}
+⏰ *ᴛɪᴍᴇ :-* ${time}
+`
+
                 let generatebutton = [{
                     buttonId: `${prefix}owner`,
                     buttonText: {
