@@ -23,21 +23,23 @@ const long = String.fromCharCode(8206)
 const readmore = long.repeat(4001)
 
 Secktor.cmd({
-        pattern: "pong",
+        pattern: "ping",
         desc: "To check ping",
+        category: "general",
         filename: __filename,
     },
     async(Void, citel) => {
         var inital = new Date().getTime();
-        await citel.reply('*_Testing Status of 🐉 Dragon-MD-V3 ❗_*');
+        await citel.reply('*_Pinging Dragon-MD-V3 ❗_*');
         var final = new Date().getTime();
-        return await citel.reply('⚕️ Dragon MD Status ⚕️\n\n☢️ *ꜱᴘᴇᴇᴅ :-* ' + (final - inital) + ' ms\n⏱️ *ᴜᴘᴛɪᴍᴇ :-* ${runtime(process.uptime())} \n📟 *ᴍᴇᴍᴏʀʏ ᴜꜱᴀɢᴇ :-* ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}');
+        return await citel.reply('☢️ *ꜱᴘᴇᴇᴅ*\n ' + (final - inital) + ' ms');
     }
 );
 
 
 Secktor.cmd({
             pattern: "system",
+            alias: ["menu"],
             desc: "Help list",
             category: "general",
             react: "🐲",
@@ -45,7 +47,7 @@ Secktor.cmd({
         },
         async(Void, citel, text) => {
             var inital = new Date().getTime();
-            await citel.reply(`_*🖇️ කරුණාකර මට YouTube Link එකක් හෝ නමක් දෙන්න ❗*_\n*උදා:-* song [නම හෝ ලින්කුව]_`);
+            await citel.reply(`('*_Testing Status of 🐉 Dragon-MD-V3 ❗_*`);
                 var final = new Date().getTime();
                 const time = moment(moment())
                     .format('HH:mm:ss')
@@ -54,7 +56,7 @@ Secktor.cmd({
                 const date = moment.tz('Asia/Colombo').format('DD/MM/YYYY')
                 let str = `⚕️ Dragon MD Status ⚕\n\n`
                 str +=
-                    `☢️ *ꜱᴘᴇᴇᴅ :-* + (final - inital) + ' ms
+                    `☢️ *ꜱᴘᴇᴇᴅ :-* ' + (final - inital) + ' ms
 ⏱️ *ᴜᴘᴛɪᴍᴇ :-* ${runtime(process.uptime())} 
 📟 *ᴍᴇᴍᴏʀʏ ᴜꜱᴀɢᴇ :-* ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
 📆 *ᴅᴀᴛᴇ :-* ${date}

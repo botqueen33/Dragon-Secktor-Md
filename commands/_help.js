@@ -105,7 +105,7 @@ Secktor.cmd({
                     },
                     type: 1
                 }, {
-                    buttonId: `${prefix}ping`,
+                    buttonId: `${prefix}system`,
                     buttonText: {
                         displayText: '⚕ ʙᴏᴛ ꜱᴛᴀᴛᴜꜱ ⚕️'
                     },
