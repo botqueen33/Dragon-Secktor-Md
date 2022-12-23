@@ -655,7 +655,7 @@ cmd({
                     let search = await yts(text);
                     let buttonMessage = {
                         video: fs.readFileSync(`./${randomName}`),
-                        jpegThumbnail: https://i.ibb.co/30VVgGW/Amiya.jpg,
+                        jpegThumbnail: ${tlang().pic1},
                         mimetype: 'video/mp4',
                         fileName: `${titleYt}.mp4`,
                         caption: ` ⿻ Title : ${titleYt}\n ⿻ File Size : ${fileSizeInMegabytes} MB\n\n🐉 ᴅᴏᴡʟᴏᴀᴅᴇᴅ ʙʏ ʙʟᴀᴄᴋ ᴅʀᴀɢᴏɴ ʏᴛ ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 📥\n\n${Config.caption}`,

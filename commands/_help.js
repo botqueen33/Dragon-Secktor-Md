@@ -86,7 +86,7 @@ Secktor.cmd({
                     str += `\n\n┏━━━❐ ❰ ✪『 ${tiny(category)} 』✪ ❱ ━━❐
 ┃\n`
                     for (const plugins of cmds[category]) {
-                        str += `┇❂➻✯ ${prefix}${plugins}\n`
+                        str += `┇ ❂➻✯ ${prefix}${plugins}\n`
                     }
                     str += `┇\n┗━━━━━━━━━━━━━❏`
                 }
