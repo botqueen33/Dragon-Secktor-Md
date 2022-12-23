@@ -39,7 +39,6 @@ Secktor.cmd({
 
 Secktor.cmd({
             pattern: "system",
-            alias: ["menu"],
             desc: "Help list",
             category: "general",
             react: "🐲",
@@ -47,21 +46,19 @@ Secktor.cmd({
         },
         async(Void, citel, text) => {
             var inital = new Date().getTime();
-            await citel.reply(`('*_Testing Status of 🐉 Dragon-MD-V3 ❗_*`);
+            await citel.reply(`*_Testing System Status of 🐉 Dragon-MD-V3 ❗_*`);
                 var final = new Date().getTime();
                 const time = moment(moment())
                     .format('HH:mm:ss')
                 moment.tz.setDefault('Asia/COLOMBO')
                     .locale('id')
                 const date = moment.tz('Asia/Colombo').format('DD/MM/YYYY')
-                let str = `⚕️ Dragon MD Status ⚕\n\n`
-                str +=
-                    `☢️ *ꜱᴘᴇᴇᴅ :-* ' + (final - inital) + ' ms
+                let str = `⚕️ Dragon MD System Status ⚕\n\n`
+                str += `☢️ *ꜱᴘᴇᴇᴅ :-* ' + (final - inital) + ' ms
 ⏱️ *ᴜᴘᴛɪᴍᴇ :-* ${runtime(process.uptime())} 
 📟 *ᴍᴇᴍᴏʀʏ ᴜꜱᴀɢᴇ :-* ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
 📆 *ᴅᴀᴛᴇ :-* ${date}
-⏰ *ᴛɪᴍᴇ :-* ${time}
-`
+⏰ *ᴛɪᴍᴇ :-* ${time}`
 
                 let generatebutton = [{
                     buttonId: `${prefix}owner`,
