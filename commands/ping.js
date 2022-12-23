@@ -37,8 +37,7 @@ Secktor.cmd({
 
 
 Secktor.cmd({
-            pattern: "ping",
-            alias: ["menu"],
+            pattern: "system",
             desc: "Help list",
             category: "general",
             react: "🐲",
@@ -55,7 +54,7 @@ Secktor.cmd({
                 const date = moment.tz('Asia/Colombo').format('DD/MM/YYYY')
                 let str = `⚕️ Dragon MD Status ⚕\n\n`
                 str +=
-                    `☢️ *ꜱᴘᴇᴇᴅ :-* + $(final - inital) + ' ms
+                    `☢️ *ꜱᴘᴇᴇᴅ :-* + (final - inital) + ' ms
 ⏱️ *ᴜᴘᴛɪᴍᴇ :-* ${runtime(process.uptime())} 
 📟 *ᴍᴇᴍᴏʀʏ ᴜꜱᴀɢᴇ :-* ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
 📆 *ᴅᴀᴛᴇ :-* ${date}
