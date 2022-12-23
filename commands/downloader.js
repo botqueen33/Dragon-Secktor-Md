@@ -631,21 +631,14 @@ cmd({
             let buttons = [{
                     buttonId: `${prefix}ytmp4 ${anu.url}`,
                     buttonText: {
-                        displayText: "🎞️ වීඩියෝව / Video 🎞️",
+                        displayText: "🎞️ Video As a Document 💾",
                     },
                     type: 1,
                 },
                 {
                     buttonId: `${prefix}ytsd ${anu.url}`,
                     buttonText: {
-                        displayText: "🎵 Audio Document 🎵",
-                    },
-                    type: 1,
-                },
-                  {
-                    buttonId: `${prefix}ytvd ${anu.url}`,
-                    buttonText: {
-                        displayText: "🎞 Video ️Document 💾",
+                        displayText: "🎵 Audio As a Document 💾",
                     },
                     type: 1,
                 },
