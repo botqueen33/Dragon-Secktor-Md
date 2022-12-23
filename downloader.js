@@ -147,7 +147,7 @@ cmd({
             let buttons = [{
                     buttonId: `${prefix}ytmp4 ${anu.url}`,
                     buttonText: {
-                        displayText: "📽 වීඩියෝව / Video 📽️",
+                        displayText: "🎞️ වීඩියෝව / Video 🎞️",
                     },
                     type: 1,
                 },
@@ -159,7 +159,7 @@ cmd({
                     type: 1,
                 },
                   {
-                    buttonId: `${prefix}ytd ${anu.url}`,
+                    buttonId: `${prefix}ytsd ${anu.url}`,
                     buttonText: {
                         displayText: "💾 As a Document 💾",
                     },
@@ -198,17 +198,6 @@ cmd({
                 footer: tlang().footer,
                 buttons: buttons,
                 headerType: 4,
-                contextInfo: {
-                            externalAdReply: {
-                                title: titleYt,
-                                body: citel.pushName,
-                                thumbnail: await getBuffer(search.all[0].thumbnail),
-                                renderLargerThumbnail: true,
-                                mediaType: 2,
-                                mediaUrl: search.all[0].thumbnail,
-                                sourceUrl: search.all[0].thumbnail
-                            }
-                        }
             };
             return Void.sendMessage(citel.chat, buttonMessage, {
                 quoted: citel,
@@ -254,7 +243,7 @@ cmd({
                 let buttons = [{
                         buttonId: `${prefix}pint ${text}`,
                         buttonText: {
-                            displayText: '🪄 Next Image 🖼️'
+                            displayText: 'Next Image 🖼️'
                         },
                         type: 1
                     }
@@ -264,7 +253,7 @@ cmd({
                     image: {
                         url: result
                     },
-                    caption: ` `,
+                    caption: `🐉 ᴅᴏᴡʟᴏᴀᴅᴇᴅ ʙʏ ʙʟᴀᴄᴋ ᴅʀᴀɢᴏɴ ᴘɪɴᴛᴇʀᴇꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 📥\n\n${Config.caption}`,
                     footer: tlang().footer,
                     buttons: buttons,
                     headerType: 4,
@@ -275,7 +264,7 @@ cmd({
                             thumbnail: log0,
                             mediaType: 2,
                             mediaUrl: ``,
-                            sourceUrl: ``
+                            sourceUrl: `https://youtube.com/@Dragon-MD-OFC`
                         }
                     }
                 }
@@ -333,7 +322,7 @@ cmd({
             let yts = require("secktor-pack")
             let search = await yts(text)
             listSerch = []
-            teskd = `*┌─[🐉DRAGON-MD-V3🐉]─❂*\n\n*┣━( _🎥 YT Downloader ‍🎞️_ )*\n\n*┃⿻ 🔍 ඔබ සෙවූ වචනය* *${text}.*\n\n*┃⿻ 📝 ප්‍රතිඵල ගණන* _+ ${search.all.length}_ \n\n*┃⿻ ❌ ඔබට නිවැරදි එක සොයාගත නොහැකි නම්. ❌*\n\n*┃⿻ 🔗 කරුණාකර නිවැරදි YT link එක හෝ නම සමඟ command කරන්න. 🔗*\n\n*┃⿻ ⛔ කරුණාකර 100MB ට අඩු වීඩියෝ පමණක් තෝරන්න. 🗃️*\n\n*┗━━━━━━━━━━━━━━◆*`
+            teskd = `*┌─[🐉DRAGON-MD-V3🐉]─❂*\n\n*┣━( _🎥 YT Downloader ‍🎞️_ )*\n\n*┃⿻ 🔍 ඔබ සෙවූ වචනය* *${text}.*\n\n*┃⿻ 📝 ප්‍රතිඵල ගණන* _+ ${search.all.length}_ \n\n*┃⿻ ❌ ඔබට නිවැරදි එක සොයාගත නොහැකි නම්. ❌*\n\n*┃⿻ 🔗 කරුණාකර නිවැරදි YT link එක හෝ නම සමඟ command කරන්න. 🔗*\n\n*┃⿻ ⛔ කරුණාකර 100MB ට අඩු සින්දු පමණක් තෝරන්න. 🗃️*\n\n*┗━━━━━━━━━━━━━━◆*`
             for (let i of search.all) {
                 listSerch.push({
                     title: i.title,
@@ -360,6 +349,234 @@ cmd({
             return Void.sendMessage(citel.chat, listMessage, {
                 quoted: citel
             })
+        }
+    )
+    //---------------------------------------------------------------------------
+cmd({
+            pattern: "yt",
+            desc: "Search from youtube.",
+            category: "downloader",
+            filename: __filename,
+            use: '<text>',
+            react: "📡",
+        },
+        async(Void, citel, text) => {
+            if (!text) return citel.reply(`Example : ${prefix + command} Back in black`)
+            let yts = require("secktor-pack")
+            let search = await yts(text)
+            listSerch = []
+            teskd = `*┌─[🐉DRAGON-MD-V3🐉]─❂*\n\n*┣━( _🎥 YT Searcher ‍🎞️_ )*\n\n*┃⿻ 🔍 ඔබ සෙවූ වචනය* *${text}.*\n\n*┃⿻ 📝 ප්‍රතිඵල ගණන* _+ ${search.all.length}_ \n\n*┃⿻ ❌ ඔබට නිවැරදි එක සොයාගත නොහැකි නම්. ❌*\n\n*┃⿻ 🔗 කරුණාකර නිවැරදි YT link එක හෝ නම සමඟ command කරන්න. 🔗*\n\n*┃⿻ ⛔ කරුණාකර 100MB ට අඩු එවා පමණක් තෝරන්න. 🗃️*\n\n*┗━━━━━━━━━━━━━━◆*`
+            for (let i of search.all) {
+                listSerch.push({
+                    title: i.title,
+                    rowId: `${prefix}ytp ${i.url}`,
+                    description: `Dragon MD / ${i.timestamp}`
+                })
+            }
+            const sections = [
+
+                {
+                    title: "Dragon MD සම්පූර්ණ සෙවීම් 🔎 / Dragon MD Total Search 🔎" + search.all.length,
+                    rows: listSerch
+                }
+
+            ]
+            const listMessage = {
+                text: teskd,
+                footer: tlang().footer,
+                title: ``,
+                buttonText: "🗃️ අවශ්‍ය එක තෝරන්න 🗃",
+                mentions: await Void.parseMention(teskd),
+                sections
+            }
+            return Void.sendMessage(citel.chat, listMessage, {
+                quoted: citel
+            })
+        }
+    )
+    //---------------------------------------------------------------------------
+cmd({
+            pattern: "ytp",
+            desc: "Sends info about the query(of youtube video/audio).",
+            filename: __filename,
+            use: '<faded-Alan walker.>',
+            react: "🧮",
+        },
+        async(Void, citel, text) => {
+            if (!text) return citel.reply(`_*🖇️ කරුණාකර මට YouTube Link එකක් හෝ නමක් දෙන්න ❗*_\n*උදා:-* _${prefix}ytp [නම හෝ ලින්කුව]_`);
+            let yts = require("secktor-pack");
+            let search = await yts(text);
+            let anu = search.videos[0];
+            let buttons = [{
+                    buttonId: `${prefix}videod ${anu.url}`,
+                    buttonText: {
+                        displayText: "🎞️ වීඩියෝව / Video 🎞️",
+                    },
+                    type: 1,
+                },
+                {
+                    buttonId: `${prefix}songd ${anu.url}`,
+                    buttonText: {
+                        displayText: "🎵 සිංදුව / Audio 🎵",
+                    },
+                    type: 1,
+                }
+            ];
+            let buttonMessage = {
+                image: {
+                    url: anu.thumbnail,
+                },
+                caption: `
+*┏━[ _🐉DRAGON-MD-V3🐉_ ]─❂*
+
+*┣━( _🎞️ YT SEARCHER 🎶_ )* 
+
+*┃⿻* ${tlang().ytTitle} ${anu.title}
+
+*┃⿻* ${tlang().ytDuration} ${anu.timestamp}
+
+*┃⿻* ${tlang().ytViews} ${anu.views}
+
+*┃⿻* ${tlang().ytLikes} ${anu.like}
+
+*┃⿻* ${tlang().ytUpload} ${anu.ago}
+
+*┃⿻* ${tlang().ytChannel} ${anu.author.name}
+
+*┃⿻* ${tlang().ytCategory} ${anu.genre}
+
+*┃⿻* ${tlang().ytLink} ${anu.url}
+
+*┃⿻* ${tlang().ytDescription} ${anu.description}
+
+*┗━━━━━━━━━━━━━━◆*
+`,
+                footer: tlang().footer,
+                buttons: buttons,
+                headerType: 4,
+            };
+            return Void.sendMessage(citel.chat, buttonMessage, {
+                quoted: citel,
+            });
+
+        }
+    )
+    //---------------------------------------------------------------------------
+cmd({
+            pattern: "songd",
+            desc: "Sends info about the query(of youtube video/audio).",
+            filename: __filename,
+            use: '<faded-Alan walker.>',
+            react: "🎶",
+        },
+        async(Void, citel, text) => {
+            if (!text) return citel.reply(`_*🖇️ කරුණාකර මට YouTube Link එකක් හෝ නමක් දෙන්න ❗*_\n*උදා:-* _${prefix}song [නම හෝ ලින්කුව]_`);
+            let yts = require("secktor-pack");
+            let search = await yts(text);
+            let anu = search.videos[0];
+            let buttons = [{
+                    buttonId: `${prefix}ytmp3 ${anu.url}`,
+                    buttonText: {
+                        displayText: "🎵 සිංදුව / Audio 🎵",
+                    },
+                    type: 1,
+                },
+                  {
+                    buttonId: `${prefix}ytsd ${anu.url}`,
+                    buttonText: {
+                        displayText: "💾 As a Document 💾",
+                    },
+                    type: 1,
+                },
+            ];
+            let buttonMessage = {
+                image: {
+                    url: anu.thumbnail,
+                },
+                caption: `
+*┏━[ _🐉DRAGON-MD-V3🐉_ ]─❂*
+
+*┣━( _🎞️ YT DOWNLOADER 🎶_ )* 
+
+*┃⿻* ${tlang().ytTitle} ${anu.title}
+
+*┃⿻* ${tlang().ytDuration} ${anu.timestamp}
+
+*┃⿻* ${tlang().ytUpload} ${anu.ago}
+
+*┃⿻* ${tlang().ytChannel} ${anu.author.name}
+
+*┃⿻* ${tlang().ytLink} ${anu.url}
+
+*┗━━━━━━━━━━━━━━◆*
+`,
+                footer: tlang().footer,
+                buttons: buttons,
+                headerType: 4,
+            };
+            return Void.sendMessage(citel.chat, buttonMessage, {
+                quoted: citel,
+            });
+
+        }
+    )
+    //---------------------------------------------------------------------------
+cmd({
+            pattern: "videod",
+            desc: "Sends info about the query(of youtube video/audio).",
+            filename: __filename,
+            use: '<faded-Alan walker.>',
+            react: "🎥",
+        },
+        async(Void, citel, text) => {
+            if (!text) return citel.reply(`_*🖇️ කරුණාකර මට YouTube Link එකක් හෝ නමක් දෙන්න ❗*_\n*උදා:-* _${prefix}video [නම හෝ ලින්කුව]_`);
+            let yts = require("secktor-pack");
+            let search = await yts(text);
+            let anu = search.videos[0];
+            let buttons = [{
+                    buttonId: `${prefix}ytmp4 ${anu.url}`,
+                    buttonText: {
+                        displayText: "🎞️ වීඩියෝව / Video 🎞",
+                    },
+                    type: 1,
+                },
+                  {
+                    buttonId: `${prefix}ytvd ${anu.url}`,
+                    buttonText: {
+                        displayText: "💾 As a Document 💾",
+                    },
+                    type: 1,
+                },
+            ];
+            let buttonMessage = {
+                image: {
+                    url: anu.thumbnail,
+                },
+                caption: `
+*┏━[ _🐉DRAGON-MD-V3🐉_ ]─❂*
+
+*┣━( _🎞️ YT DOWNLOADER 🎶_ )* 
+
+*┃⿻* ${tlang().ytTitle} ${anu.title}
+
+*┃⿻* ${tlang().ytDuration} ${anu.timestamp}
+
+*┃⿻* ${tlang().ytUpload} ${anu.ago}
+
+*┃⿻* ${tlang().ytChannel} ${anu.author.name}
+
+*┃⿻* ${tlang().ytLink} ${anu.url}
+
+*┗━━━━━━━━━━━━━━◆*
+`,
+                footer: tlang().footer,
+                buttons: buttons,
+                headerType: 4,
+            };
+            return Void.sendMessage(citel.chat, buttonMessage, {
+                quoted: citel,
+            });
+
         }
     )
     //---------------------------------------------------------------------------
@@ -394,6 +611,82 @@ cmd({
             }, {
                 quoted: citel,
             });
+        }
+    )
+    //---------------------------------------------------------------------------
+
+cmd({
+            pattern: "ytd",
+            desc: "Sends info about the query(of youtube video/audio).",
+            category: "downloader",
+            filename: __filename,
+            use: '<faded-Alan walker.>',
+            react: "🎶",
+        },
+        async(Void, citel, text) => {
+            if (!text) return citel.reply(`_*🖇️ කරුණාකර මට YouTube Link එකක් හෝ නමක් දෙන්න ❗*_\n*උදා:-* _${prefix}song [නම හෝ ලින්කුව]_`);
+            let yts = require("secktor-pack");
+            let search = await yts(text);
+            let anu = search.videos[0];
+            let buttons = [{
+                    buttonId: `${prefix}ytmp4 ${anu.url}`,
+                    buttonText: {
+                        displayText: "🎞️ වීඩියෝව / Video 🎞️",
+                    },
+                    type: 1,
+                },
+                {
+                    buttonId: `${prefix}ytsd ${anu.url}`,
+                    buttonText: {
+                        displayText: "🎵 Audio Document 🎵",
+                    },
+                    type: 1,
+                },
+                  {
+                    buttonId: `${prefix}ytvd ${anu.url}`,
+                    buttonText: {
+                        displayText: "🎞 Video ️Document 💾",
+                    },
+                    type: 1,
+                },
+            ];
+            let buttonMessage = {
+                image: {
+                    url: anu.thumbnail,
+                },
+                caption: `
+*┏━[ _🐉DRAGON-MD-V3🐉_ ]─❂*
+
+*┣━( _🎞️ YT DOWNLOADER 🎶_ )* 
+
+*┃⿻* ${tlang().ytTitle} ${anu.title}
+
+*┃⿻* ${tlang().ytDuration} ${anu.timestamp}
+
+*┃⿻* ${tlang().ytViews} ${anu.views}
+
+*┃⿻* ${tlang().ytLikes} ${anu.like}
+
+*┃⿻* ${tlang().ytUpload} ${anu.ago}
+
+*┃⿻* ${tlang().ytChannel} ${anu.author.name}
+
+*┃⿻* ${tlang().ytCategory} ${anu.genre}
+
+*┃⿻* ${tlang().ytLink} ${anu.url}
+
+*┃⿻* ${tlang().ytDescription} ${anu.description}
+
+*┗━━━━━━━━━━━━━━◆*
+`,
+                footer: tlang().footer,
+                buttons: buttons,
+                headerType: 4,
+            };
+            return Void.sendMessage(citel.chat, buttonMessage, {
+                quoted: citel,
+            });
+
         }
     )
     //---------------------------------------------------------------------------
@@ -444,16 +737,17 @@ cmd({
                         caption: ` ⿻ Title : ${titleYt}\n ⿻ File Size : ${fileSizeInMegabytes} MB\n\n🐉 ᴅᴏᴡʟᴏᴀᴅᴇᴅ ʙʏ ʙʟᴀᴄᴋ ᴅʀᴀɢᴏɴ ʏᴛ ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 📥\n\n${Config.caption}`,
                         headerType: 4,
                         contextInfo: {
-                            externalAdReply: {
-                                title: titleYt,
-                                body: citel.pushName,
-                                thumbnail: await getBuffer(search.all[0].thumbnail),
-                                renderLargerThumbnail: true,
-                                mediaType: 2,
-                                mediaUrl: search.all[0].thumbnail,
-                                sourceUrl: search.all[0].thumbnail
-                            }
-                        }
+                        externalAdReply: {
+                            title: titleYt,
+                            body: citel.pushName,
+                            renderLargerThumbnail: true,
+                            thumbnailUrl: search.all[0].thumbnail,
+                            mediaUrl: text,
+                            mediaType: 1,
+                            thumbnail: await getBuffer(search.all[0].thumbnail),
+                            sourceUrl: text,
+                        },
+                    },
                     }
                     return Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
                 } else {
@@ -480,19 +774,19 @@ cmd({
         };
 
         if (text.length === 0) {
-            reply(`❗ URL is empty! \nSend ${prefix}ytmp3 url`);
+            reply(`❌ URL is empty! \nSend ${prefix}ytmp3 url`);
             return;
         }
         try {
             let urlYt = text;
             if (!urlYt.startsWith("http")) {
-                citel.reply(`❗ Give youtube link!`);
+                citel.reply(`❌ Give youtube link!`);
                 return;
             }
             let infoYt = await ytdl.getInfo(urlYt);
             //30 MIN
             if (infoYt.videoDetails.lengthSeconds >= videotime) {
-                reply(`❗ I can't download that long video!`);
+                reply(`❌ I can't download that long video!`);
                 return;
             }
             let titleYt = infoYt.videoDetails.title;
@@ -516,7 +810,6 @@ cmd({
                     audio: fs.readFileSync(`./${randomName}`),
                     mimetype: 'audio/mpeg',
                     fileName: titleYt + ".mp3",
-                    caption: ` ⿻ Title : ${titleYt}\n ⿻ File Size : ${fileSizeInMegabytes} MB\n\n🐉 ᴅᴏᴡʟᴏᴀᴅᴇᴅ ʙʏ ʙʟᴀᴄᴋ ᴅʀᴀɢᴏɴ ʏᴛ ꜱᴏɴɢ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 📥\n\n${Config.caption}`,
                     headerType: 4,
                     contextInfo: {
                         externalAdReply: {
@@ -533,7 +826,7 @@ cmd({
                 }
                 return Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
             } else {
-                citel.reply(`❗ File size bigger than 40mb.`);
+                citel.reply(`❌ File size bigger than 40mb.`);
             }
             fs.unlinkSync(`./${randomName}`);
         } catch (e) {
@@ -545,9 +838,8 @@ cmd({
 
   //---------------------------------------------------------------------------
 cmd({
-        pattern: "ytd",
+        pattern: "ytsd",
         desc: "Downloads audio by yt link as document.",
-        category: "downloader",
         use: '<ytdoc video url>',
         react: "⬇️",
     },
@@ -594,6 +886,81 @@ cmd({
                     mimetype: 'audio/mpeg',
                     fileName: titleYt + ".mp3",
                     caption: ` ⿻ Title : ${titleYt}\n ⿻ File Size : ${fileSizeInMegabytes} MB\n\n🐉 ᴅᴏᴡʟᴏᴀᴅᴇᴅ ʙʏ ʙʟᴀᴄᴋ ᴅʀᴀɢᴏɴ ʏᴛ ꜱᴏɴɢ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 📥\n\n${Config.caption}`,
+                    headerType: 4,
+                    contextInfo: {
+                        externalAdReply: {
+                            title: titleYt,
+                            body: citel.pushName,
+                            renderLargerThumbnail: true,
+                            thumbnailUrl: search.all[0].thumbnail,
+                            mediaUrl: text,
+                            mediaType: 1,
+                            thumbnail: await getBuffer(search.all[0].thumbnail),
+                            sourceUrl: text,
+                        },
+                    },
+                }
+                return Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
+            } else {
+                citel.reply(`⛔ File size bigger than 40mb ⛔.`);
+            }
+            fs.unlinkSync(`./${randomName}`);
+        } catch (e) {
+            console.log(e)
+        }
+
+    }
+)
+  //---------------------------------------------------------------------------
+cmd({
+        pattern: "ytvd",
+        desc: "Downloads audio by yt link as document.",
+        use: '<ytdoc video url>',
+        react: "⬇️",
+    },
+    async(Void, citel, text) => {
+        const getRandom = (ext) => {
+            return `${Math.floor(Math.random() * 10000)}${ext}`;
+        };
+
+        if (text.length === 0) {
+            reply(`❗ URL is empty! \nSend ${prefix}ytmp3 url`);
+            return;
+        }
+        try {
+            let urlYt = text;
+            if (!urlYt.startsWith("http")) {
+                citel.reply(`❗ Give youtube link!`);
+                return;
+            }
+            let infoYt = await ytdl.getInfo(urlYt);
+            //30 MIN
+            if (infoYt.videoDetails.lengthSeconds >= videotime) {
+                reply(`❗ I can't download that long video!`);
+                return;
+            }
+            let titleYt = infoYt.videoDetails.title;
+            let randomName = getRandom(".mp4");
+            const stream = ytdl(urlYt, {
+                    filter: (info) => info.itag == 22 || info.itag == 18,
+                })
+                .pipe(fs.createWriteStream(`./${randomName}`));
+            await new Promise((resolve, reject) => {
+                stream.on("error", reject);
+                stream.on("finish", resolve);
+            });
+
+            let stats = fs.statSync(`./${randomName}`);
+            let fileSizeInBytes = stats.size;
+            let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
+            if (fileSizeInMegabytes <= dlsize) {
+                let yts = require("secktor-pack");
+                let search = await yts(text);
+                let buttonMessage = {
+                    document: fs.readFileSync(`./${randomName}`),
+                    mimetype: 'video/mp4',
+                    fileName: titleYt + ".mp4",
+                    caption: ` ⿻ Title : ${titleYt}\n ⿻ File Size : ${fileSizeInMegabytes} MB\n\n🐉 ᴅᴏᴡʟᴏᴀᴅᴇᴅ ʙʏ ʙʟᴀᴄᴋ ᴅʀᴀɢᴏɴ ʏᴛ ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 📥\n\n${Config.caption}`,
                     headerType: 4,
                     contextInfo: {
                         externalAdReply: {
