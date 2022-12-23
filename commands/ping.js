@@ -45,7 +45,7 @@ Secktor.cmd({
             filename: __filename
         },
         async(Void, citel, text) => {
-            if (.ping) return citel.reply(`_*🖇️ කරුණාකර මට YouTube Link එකක් හෝ නමක් දෙන්න ❗*_\n*උදා:-* _${prefix}song [නම හෝ ලින්කුව]_`);
+            if (ping) return citel.reply(`_*🖇️ කරුණාකර මට YouTube Link එකක් හෝ නමක් දෙන්න ❗*_\n*උදා:-* _${prefix}song [නම හෝ ලින්කුව]_`);
              const { commands } = require('../lib');
                 const time = moment(moment())
                     .format('HH:mm:ss')
