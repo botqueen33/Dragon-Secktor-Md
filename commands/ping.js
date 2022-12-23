@@ -45,22 +45,16 @@ Secktor.cmd({
             filename: __filename
         },
         async(Void, citel, text) => {
-            var inital = new Date().getTime();
+            const { commands } = require('../lib');
             await citel.reply(`*_Testing System Status of 🐉 Dragon-MD-V3 ❗_*`);
-                var final = new Date().getTime();
+                const cmds = {}
                 const time = moment(moment())
                     .format('HH:mm:ss')
                 moment.tz.setDefault('Asia/COLOMBO')
                     .locale('id')
                 const date = moment.tz('Asia/Colombo').format('DD/MM/YYYY')
                 let str = `⚕️ Dragon MD System Status ⚕\n\n`
-                str += 
-                `⏱️ *ᴜᴘᴛɪᴍᴇ :-* ${runtime(process.uptime())} 
-📟 *ᴍᴇᴍᴏʀʏ ᴜꜱᴀɢᴇ :-* ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
-📆 *ᴅᴀᴛᴇ :-* ${date}
-⏰ *ᴛɪᴍᴇ :-* ${time}
-`
-
+                str += `☢️ *ꜱᴘᴇᴇᴅ :-* ' + (final - inital) + ' ms\n⏱️ *ᴜᴘᴛɪᴍᴇ :-* ${runtime(process.uptime())} \n📟 *ᴍᴇᴍᴏʀʏ ᴜꜱᴀɢᴇ :-* ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}\n📆 *ᴅᴀᴛᴇ :-* ${date}\n⏰ *ᴛɪᴍᴇ :-* ${time}`
                 let generatebutton = [{
                     buttonId: `${prefix}owner`,
                     buttonText: {
