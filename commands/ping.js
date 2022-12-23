@@ -54,8 +54,7 @@ Secktor.cmd({
                     .locale('id')
                 const date = moment.tz('Asia/Colombo').format('DD/MM/YYYY')
                 let str = `⚕️ Dragon MD System Status ⚕\n\n`
-                str += `☢️ *ꜱᴘᴇᴇᴅ :-* ' + (final - inital) + ' ms
-⏱️ *ᴜᴘᴛɪᴍᴇ :-* ${runtime(process.uptime())} 
+                str += `⏱️ *ᴜᴘᴛɪᴍᴇ :-* ${runtime(process.uptime())} 
 📟 *ᴍᴇᴍᴏʀʏ ᴜꜱᴀɢᴇ :-* ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
 📆 *ᴅᴀᴛᴇ :-* ${date}
 ⏰ *ᴛɪᴍᴇ :-* ${time}`
