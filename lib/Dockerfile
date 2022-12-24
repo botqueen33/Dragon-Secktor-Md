@@ -1,6 +1,6 @@
-FROM quay.io/sampandey001/secktor
-RUN git clone https://github.com/SamPandey001/Secktor-Md /root/SamPandey001
-WORKDIR /root/SamPandey001/
+FROM https://github.com/TechwithAmee1/Dragon-Secktor-Md
+RUN git clone https://github.com/TechwithAmee1/Dragon-Secktor-Md
+WORKDIR /root/TechwithAmee1/
 RUN yarn install --network-concurrency 1
 EXPOSE 8000
 CMD ["npm", "start"]
