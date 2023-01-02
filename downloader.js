@@ -111,7 +111,7 @@ cmd({
             const sections = [
 
                 {
-                    title: "Dragon MD සම්පූර්ණ සෙවීම් 🔎 / Dragon MD Total Search 🔎" + search.all.length,
+                    title: "CHAMI MD සම්පූර්ණ සෙවීම් 🔎 / CHAMI MD Total Search 🔎" + search.all.length,
                     rows: listSerch
                 }
 
@@ -119,7 +119,7 @@ cmd({
             const listMessage = {
                 text: teskd,
                 footer: tlang().footer,
-                title: `*┌─[🐉DRAGON-MD-V3🐉]─❂*\n\n*┣━( _🎥 YT Downloader ‍🎞️_ )*`,
+                title: `*┌─[👹 CHAMI-MD 👹]─❂*\n\n*┣━( _🎥 YT Downloader ‍🎞️_ )*`,
                 buttonText: "🗃️ අවශ්‍ය වීඩියෝව තෝරන්න 🗃",
                 mentions: await Void.parseMention(teskd),
                 sections
@@ -171,7 +171,7 @@ cmd({
                     url: anu.thumbnail,
                 },
                 caption: `
-*┏━[ _🐉DRAGON-MD-V3🐉_ ]─❂*
+*┏━[ _👹 CHAMI-MD 👹_ ]─❂*
 
 *┣━( _🎞️ YT DOWNLOADER 🎶_ )* 
 
@@ -253,14 +253,14 @@ cmd({
                     image: {
                         url: result
                     },
-                    caption: `🐉 ᴅᴏᴡʟᴏᴀᴅᴇᴅ ʙʏ ʙʟᴀᴄᴋ ᴅʀᴀɢᴏɴ ᴘɪɴᴛᴇʀᴇꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 📥\n\n${Config.caption}`,
+                    caption: `🐉 ᴅᴏᴡʟᴏᴀᴅᴇᴅ ʙʏ ᴄʜᴀᴍɪ ᴍᴅ ᴘɪɴᴛᴇʀᴇꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 📥\n\n${Config.caption}`,
                     footer: tlang().footer,
                     buttons: buttons,
                     headerType: 4,
                     contextInfo: {
                         externalAdReply: {
                             title: `${tlang().pintwbtit}`,
-                            body: `🐉 Dragon-MD 🐉`,
+                            body: `👹 CHAMI-MD 👹`,
                             thumbnail: log0,
                             mediaType: 2,
                             mediaUrl: ``,
@@ -322,7 +322,7 @@ cmd({
             let yts = require("secktor-pack")
             let search = await yts(text)
             listSerch = []
-            teskd = `*┌─[🐉DRAGON-MD-V3🐉]─❂*\n\n*┣━( _🎥 YT Downloader ‍🎞️_ )*\n\n*┃⿻ 🔍 ඔබ සෙවූ වචනය* *${text}.*\n\n*┃⿻ 📝 ප්‍රතිඵල ගණන* _+ ${search.all.length}_ \n\n*┃⿻ ❌ ඔබට නිවැරදි එක සොයාගත නොහැකි නම්. ❌*\n\n*┃⿻ 🔗 කරුණාකර නිවැරදි YT link එක හෝ නම සමඟ command කරන්න. 🔗*\n\n*┃⿻ ⛔ කරුණාකර 100MB ට අඩු සින්දු පමණක් තෝරන්න. 🗃️*\n\n*┗━━━━━━━━━━━━━━◆*`
+            teskd = `*┌─[👹 CHAMI-MD 👹]─❂*\n\n*┣━( _🎥 YT Downloader ‍🎞️_ )*\n\n*┃⿻ 🔍 ඔබ සෙවූ වචනය* *${text}.*\n\n*┃⿻ 📝 ප්‍රතිඵල ගණන* _+ ${search.all.length}_ \n\n*┃⿻ ❌ ඔබට නිවැරදි එක සොයාගත නොහැකි නම්. ❌*\n\n*┃⿻ 🔗 කරුණාකර නිවැරදි YT link එක හෝ නම සමඟ command කරන්න. 🔗*\n\n*┃⿻ ⛔ කරුණාකර 100MB ට අඩු සින්දු පමණක් තෝරන්න. 🗃️*\n\n*┗━━━━━━━━━━━━━━◆*`
             for (let i of search.all) {
                 listSerch.push({
                     title: i.title,
@@ -333,7 +333,7 @@ cmd({
             const sections = [
 
                 {
-                    title: "Dragon MD සම්පූර්ණ සෙවීම් 🔎 / Dragon MD Total Search 🔎" + search.all.length,
+                    title: "CHAMI-MD සම්පූර්ණ සෙවීම් 🔎 / CHAMI-MD Total Search 🔎" + search.all.length,
                     rows: listSerch
                 }
 
@@ -365,7 +365,7 @@ cmd({
             let yts = require("secktor-pack")
             let search = await yts(text)
             listSerch = []
-            teskd = `*┌─[🐉DRAGON-MD-V3🐉]─❂*\n\n*┣━( _🎥 YT Searcher ‍🎞️_ )*\n\n*┃⿻ 🔍 ඔබ සෙවූ වචනය* *${text}.*\n\n*┃⿻ 📝 ප්‍රතිඵල ගණන* _+ ${search.all.length}_ \n\n*┃⿻ ❌ ඔබට නිවැරදි එක සොයාගත නොහැකි නම්. ❌*\n\n*┃⿻ 🔗 කරුණාකර නිවැරදි YT link එක හෝ නම සමඟ command කරන්න. 🔗*\n\n*┃⿻ ⛔ කරුණාකර 100MB ට අඩු එවා පමණක් තෝරන්න. 🗃️*\n\n*┗━━━━━━━━━━━━━━◆*`
+            teskd = `*┌─[👹 CHAMI-MD 👹]─❂*\n\n*┣━( _🎥 YT Searcher ‍🎞️_ )*\n\n*┃⿻ 🔍 ඔබ සෙවූ වචනය* *${text}.*\n\n*┃⿻ 📝 ප්‍රතිඵල ගණන* _+ ${search.all.length}_ \n\n*┃⿻ ❌ ඔබට නිවැරදි එක සොයාගත නොහැකි නම්. ❌*\n\n*┃⿻ 🔗 කරුණාකර නිවැරදි YT link එක හෝ නම සමඟ command කරන්න. 🔗*\n\n*┃⿻ ⛔ කරුණාකර 100MB ට අඩු එවා පමණක් තෝරන්න. 🗃️*\n\n*┗━━━━━━━━━━━━━━◆*`
             for (let i of search.all) {
                 listSerch.push({
                     title: i.title,
@@ -376,7 +376,7 @@ cmd({
             const sections = [
 
                 {
-                    title: "Dragon MD සම්පූර්ණ සෙවීම් 🔎 / Dragon MD Total Search 🔎" + search.all.length,
+                    title: "CHAMI-MD සම්පූර්ණ සෙවීම් 🔎 / CHAMI-MD Total Search 🔎" + search.all.length,
                     rows: listSerch
                 }
 
@@ -427,7 +427,7 @@ cmd({
                     url: anu.thumbnail,
                 },
                 caption: `
-*┏━[ _🐉DRAGON-MD-V3🐉_ ]─❂*
+*┏━[ _👹 CHAMI-MD 👹_ ]─❂*
 
 *┣━( _🎞️ YT SEARCHER 🎶_ )* 
 
@@ -494,7 +494,7 @@ cmd({
                     url: anu.thumbnail,
                 },
                 caption: `
-*┏━[ _🐉DRAGON-MD-V3🐉_ ]─❂*
+*┏━[ _👹 CHAMI-MD 👹_ ]─❂*
 
 *┣━( _🎞️ YT DOWNLOADER 🎶_ )* 
 
@@ -553,7 +553,7 @@ cmd({
                     url: anu.thumbnail,
                 },
                 caption: `
-*┏━[ _🐉DRAGON-MD-V3🐉_ ]─❂*
+*┏━[ _👹 CHAMI-MD 👹_ ]─❂*
 
 *┣━( _🎞️ YT DOWNLOADER 🎶_ )* 
 
@@ -655,7 +655,7 @@ cmd({
                     url: anu.thumbnail,
                 },
                 caption: `
-*┏━[ _🐉DRAGON-MD-V3🐉_ ]─❂*
+*┏━[ _👹 CHAMI-MD 👹_ ]─❂*
 
 *┣━( _🎞️ YT DOWNLOADER 🎶_ )* 
 
@@ -734,7 +734,7 @@ cmd({
                         jpegThumbnail: log0,
                         mimetype: 'video/mp4',
                         fileName: `${titleYt}.mp4`,
-                        caption: ` ⿻ Title : ${titleYt}\n ⿻ File Size : ${fileSizeInMegabytes} MB\n\n🐉 ᴅᴏᴡʟᴏᴀᴅᴇᴅ ʙʏ ʙʟᴀᴄᴋ ᴅʀᴀɢᴏɴ ʏᴛ ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 📥\n\n${Config.caption}`,
+                        caption: ` ⿻ Title : ${titleYt}\n ⿻ File Size : ${fileSizeInMegabytes} MB\n\n🐉 ᴅᴏᴡʟᴏᴀᴅᴇᴅ ʙʏ ᴄʜᴀᴍɪ ᴍᴅ ʏᴛ ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 📥\n\n${Config.caption}`,
                         headerType: 4,
                         contextInfo: {
                         externalAdReply: {
@@ -885,7 +885,7 @@ cmd({
                     document: fs.readFileSync(`./${randomName}`),
                     mimetype: 'audio/mpeg',
                     fileName: titleYt + ".mp3",
-                    caption: ` ⿻ Title : ${titleYt}\n ⿻ File Size : ${fileSizeInMegabytes} MB\n\n🐉 ᴅᴏᴡʟᴏᴀᴅᴇᴅ ʙʏ ʙʟᴀᴄᴋ ᴅʀᴀɢᴏɴ ʏᴛ ꜱᴏɴɢ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 📥\n\n${Config.caption}`,
+                    caption: ` ⿻ Title : ${titleYt}\n ⿻ File Size : ${fileSizeInMegabytes} MB\n\n🐉 ᴅᴏᴡʟᴏᴀᴅᴇᴅ ʙʏ ᴄʜᴀᴍɪ ᴍᴅ ʏᴛ ꜱᴏɴɢ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 📥\n\n${Config.caption}`,
                     headerType: 4,
                     contextInfo: {
                         externalAdReply: {
@@ -960,7 +960,7 @@ cmd({
                     document: fs.readFileSync(`./${randomName}`),
                     mimetype: 'video/mp4',
                     fileName: titleYt + ".mp4",
-                    caption: ` ⿻ Title : ${titleYt}\n ⿻ File Size : ${fileSizeInMegabytes} MB\n\n🐉 ᴅᴏᴡʟᴏᴀᴅᴇᴅ ʙʏ ʙʟᴀᴄᴋ ᴅʀᴀɢᴏɴ ʏᴛ ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 📥\n\n${Config.caption}`,
+                    caption: ` ⿻ Title : ${titleYt}\n ⿻ File Size : ${fileSizeInMegabytes} MB\n\n🐉 ᴅᴏᴡʟᴏᴀᴅᴇᴅ ʙʏ ᴄʜᴀᴍɪ ᴍᴅ ʏᴛ ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 📥\n\n${Config.caption}`,
                     headerType: 4,
                     contextInfo: {
                         externalAdReply: {
